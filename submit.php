@@ -1,3 +1,7 @@
+<?php
+//first connect to the database
+require_once('includes/connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,7 @@
         <nav>
             <ul>
                 <li class="sub">
-                    <a href="home.html">Home</a>
+                    <a href="index.php">Home</a>
                     <ul>
                         <li><a href="presentation.html">Details</a></li>
                         <li class="sub">
@@ -106,26 +110,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
     
-  if (empty($_POST["website"])) {
+  if (empty($_POST["Name Of Game"])) {
     $website = "";
   } else {
-    $website = test_input($_POST["website"]);
+    $website = test_input($_POST["Game"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
       $websiteErr = "Invalid URL";
     }
   }
 
-  if (empty($_POST["comment"])) {
+  if (empty($_POST["Other Infomation"])) {
     $comment = "";
   } else {
-    $comment = test_input($_POST["comment"]);
+    $comment = test_input($_POST["Note"]);
   }
 
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+  if (empty($_POST["Platform"])) {
+    $genderErr = "What Platform Did You Use?";
   } else {
-    $gender = test_input($_POST["gender"]);
+    $gender = test_input($_POST["Platform"]);
   }
 }
 

@@ -389,7 +389,7 @@ nav li > ul > li:hover > ul  {
     background-color: #040404;
   }
   .submit {
-    text-decoration-color: #fff;
+    color: white;
   }
   .error {
     color: red;

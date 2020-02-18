@@ -1,3 +1,7 @@
+<?php
+//first connect to the database
+require_once('includes/connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,7 @@
         <nav>
             <ul>
                 <li class="sub">
-                    <a href="home.html">Home</a>
+                    <a href="chrome://kill/">Home</a>
                     <ul>
                         <li><a href="presentation.html">Details</a></li>
                         <li class="sub">

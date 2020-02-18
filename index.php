@@ -1,3 +1,7 @@
+<?php
+//first connect to the database
+require_once('includes/connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,7 @@
         <nav>
                 <ul>
                     <li class="sub">
-                        <a href="index.html">Home</a>
+                        <a href="#">Home</a>
                         <ul>
                             <li><a href="Details.html">Details</a></li>
                             <li class="sub">
@@ -34,7 +38,7 @@
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="sumbit.html">Sumbit Your Results</a>
+                        <a href="#">SearchBar</a>
                         <ul>
                             <p> Put Search Bar Hear</p>
                         </ul>
@@ -75,7 +79,7 @@
                             
                         </ul>
                     </li>
-                    <li><a href="news.html">Submit Your Results</a></li>
+                    <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
             </nav>
             </div>
@@ -107,12 +111,6 @@
                    <a class="item5-3" ><div></div></a>
                    <a class="item5-4" ><div></div></a>
                    <a class="item5-5" ><div></div></a>
-
-                   
-
-                   
-                
-                
                   </div>
                 </div>
             </div>          
