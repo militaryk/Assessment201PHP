@@ -84,100 +84,58 @@ require_once('includes/connect.php');
         </nav>
             </div>
             <div class="bodybox">
-                <?php
-// define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
-
+            <form method="post" action="submit.php">
+            <span class="submit">Game:</span> <input type="text" name="Game" ><br>
+            <br>
+            <span class="submit">Genre:</span> <br><textarea name="Genre"></textarea>  <br>
+            <br>
+            <span class="submit">Type:</span> <input type="text" name="Type"><br>
+            <br>
+            <span class="submit">Time:</span> <input type="text" name="Time"><br>
+            <br>
+            <span class="submit">Platform:</span> <input type="text" name="Platform"><br>
+            <br>
+            <span class="submit">Date:</span> <input type="text" name="Date"><br>
+            <br>
+            <span class="submit">UserName:</span> <input type="text" name="UserName"><br>
+            <?php
+//check to see if form has been submitted, if not the blank entries will be displayed
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
-  
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
-    }
-  }
-    
-  if (empty($_POST["Name Of Game"])) {
-    $website = "";
-  } else {
-    $website = test_input($_POST["Game"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
-    }
-  }
+	// form was submitted, place data into appropriate variables
+	$Game = $_POST["Game"];
+	$Genre = $_POST["Genre"];
+	$Type = $_POST["Type"];
+  $Time = $_POST["Time"];
+  $Platform = $_POST["Platform"];
+  $Date = $_POST["Date"];
+  $UserName = $_POST["UserName"];
 
-  if (empty($_POST["Other Infomation"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["Note"]);
-  }
+	try {
+		// set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  if (empty($_POST["Platform"])) {
-    $genderErr = "What Platform Did You Use?";
-  } else {
-    $gender = test_input($_POST["Platform"]);
-  }
-}
+		//insert data into activity table
+    $count = $pdo->exec("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName) VALUES ('$Game', '$Genre','$Type','$Time','$Platform','$Date,'$UserName')");
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+       // echo the number of affected rows, if count =1 the record (row) was successfully inserted
+    if($count == 1){
+    	echo "record added to database";
+    	}
+
+    // close the database connection 
+    $pdo = null;
+	}
+   	catch(PDOException $e)
+    {
+    echo $e->getMessage();
+    }
+ }
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  <p><span class="submit"> Name:</span><p> <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  <p><span class="submit"> Email</span><p> <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  <p><span class="submit"> Website</span><p> <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
-  <p><span class="submit"> Comment</span><p> <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  <p><span class="submit"> Gender</span><p>
-  <input type="radio" name="Platform" <?php if (isset($platform) && $platform=="PC") echo "checked";?> value="PC">PC
-  <input type="radio" name="Platform" <?php if (isset($platform) && $platform=="Playstation") echo "checked";?> value="PlaySation">Playstation
-  <input type="radio" name="Platform" <?php if (isset($platform) && $platform=="Xbox") echo "checked";?> value="XBOX">Xbox
-  <input type="radio" name="Platform" <?php if (isset($platform) && $platform=="Nintendo") echo "checked";?> value="Nintendo">Nintendo
-  <input type="radio" name="Platform" <?php if (isset($platform) && $platform=="Android") echo "checked";?> value="Android">Android
-  <span class="error">* <?php echo $genderErr;?></span>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
+
+<input type="submit" value ="submit">
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-?>
 
                 </div>
             </div>          
