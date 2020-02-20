@@ -85,17 +85,36 @@ require_once('includes/connect.php');
             </div>
             <div class="bodybox">
             <form method="post" action="submit.php">
-            <span class="submit">Game:</span> <input type="text" name="Game" ><br>
+            <span class="submit">Game:</span> <input type="text" name="Game" require="/^[a-zA-Z ]*$/"><br>
             <br>
-            <span class="submit">Genre:</span> <br><textarea name="Genre"></textarea>  <br>
+            <span class="submit">Genre:</span> <select name ="Genre" id="">
+            <option value="Sandbox">Sandbox</option>
+            <option value="FPV">First Person Shooter</option>
+            <option value="Quest">Quest</option>
+            <option value="Survival">Survival</option>
+            </select>
             <br>
-            <span class="submit">Type:</span> <input type="text" name="Type"><br>
             <br>
-            <span class="submit">Time:</span> <input type="text" name="Time"><br>
+            <span class="submit">Type Of Game:</span> <select name ="Type" id="">
+            <option value="PC">PC (Computer)</option>
+            <option value="PlayStaion">PlayStaion</option>
+            <option value="Xbox">XBOX</option>
+            <option value="Nintendo">Nintendo</option>
+            <option value="Android">Android</option>
+            </select>
             <br>
-            <span class="submit">Platform:</span> <input type="text" name="Platform"><br>
+            <span class="submit">Time: Hours:</span> <input type="number" name="TimeHour" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="TimeMin" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="TimeSec" min="0" step="1" max="60"><span class="submit">Secs</span><br>
             <br>
-            <span class="submit">Date:</span> <input type="text" name="Date"><br>
+            <span class="submit">Platform:</span><span class="submit">Genre:</span> <select name ="Genre" id="">
+            <option value="PC">PC (Computer)</option>
+            <option value="PlayStaion">PlayStaion</option>
+            <option value="Xbox">XBOX</option>
+            <option value="Nintendo">Nintendo</option>
+            <option value="Android">Android</option>
+            </select>
+            <br>
+            <br>
+            <span class="submit">Date:</span> <input type="date" name="Date"><br>
             <br>
             <span class="submit">UserName:</span> <input type="text" name="UserName"><br>
             <?php
@@ -115,7 +134,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $count = $pdo->exec("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName) VALUES ('$Game', '$Genre','$Type','$Time','$Platform','$Date,'$UserName')");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName) VALUES (:game, :genre,:type,:time,:platform,:date,:username)");
+    $sth->bindValue(':game', $Game, PDO::PARAM_STR);
+    $sth->bindValue(':genre', $Genre, PDO::PARAM_STR);
+    $sth->bindValue(':type', $Type, PDO::PARAM_STR);
+    $sth->bindValue(':time', $Time, PDO::PARAM_STR);
+    $sth->bindValue(':platform', $Platform, PDO::PARAM_STR);
+    $sth->bindValue(':date', $Date, PDO::PARAM_STR);
+    $sth->bindValue(':username', $UserName, PDO::PARAM_STR);
+    $count = $sth->execute();
 
        // echo the number of affected rows, if count =1 the record (row) was successfully inserted
     if($count == 1){
