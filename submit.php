@@ -84,6 +84,10 @@ require_once('includes/connect.php');
         </nav>
             </div>
             <div class="bodybox">
+            <br>
+            <br>
+            <div class="formbox">
+            <br>
             <form method="post" action="submit.php">
             <span class="submit">Game:</span> <input type="text" name="Game" require="/^[a-zA-Z ]*$/"><br>
             <br>
@@ -96,16 +100,19 @@ require_once('includes/connect.php');
             <br>
             <br>
             <span class="submit">Type Of Game:</span> <select name ="Type" id="">
-            <option value="PC">PC (Computer)</option>
-            <option value="PlayStaion">PlayStaion</option>
-            <option value="Xbox">XBOX</option>
-            <option value="Nintendo">Nintendo</option>
-            <option value="Android">Android</option>
+            <option value="PC">Action Games</option>
+            <option value="PlayStaion">Action-Adventure Games</option>
+            <option value="Xbox">Adventure Games</option>
+            <option value="Nintendo">Role-Playing</option>
+            <option value="Android">Simulation</option>
+            <option value="Android">Stratergy</option>
+            <option value="Android">Puzzle Games</option>
             </select>
+            <br>
             <br>
             <span class="submit">Time: Hours:</span> <input type="number" name="TimeHour" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="TimeMin" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="TimeSec" min="0" step="1" max="60"><span class="submit">Secs</span><br>
             <br>
-            <span class="submit">Platform:</span><span class="submit">Genre:</span> <select name ="Genre" id="">
+            <span class="submit">Platform:</span><select name ="Genre" id="">
             <option value="PC">PC (Computer)</option>
             <option value="PlayStaion">PlayStaion</option>
             <option value="Xbox">XBOX</option>
@@ -116,7 +123,7 @@ require_once('includes/connect.php');
             <br>
             <span class="submit">Date:</span> <input type="date" name="Date"><br>
             <br>
-            <span class="submit">UserName:</span> <input type="text" name="UserName"><br>
+            <span class="submit">Username:</span> <input type="text" name="UserName"><br>
             <?php
 //check to see if form has been submitted, if not the blank entries will be displayed
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -128,13 +135,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $Platform = $_POST["Platform"];
   $Date = $_POST["Date"];
   $UserName = $_POST["UserName"];
+  $timesubmitted = date('Y-m-d H:i:s');
+
 
 	try {
 		// set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName) VALUES (:game, :genre,:type,:time,:platform,:date,:username)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName,timesubmited) VALUES (:game, :genre,:type,:time,:platform,:date,:username,:timesubmited)");
     $sth->bindValue(':game', $Game, PDO::PARAM_STR);
     $sth->bindValue(':genre', $Genre, PDO::PARAM_STR);
     $sth->bindValue(':type', $Type, PDO::PARAM_STR);
@@ -142,6 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sth->bindValue(':platform', $Platform, PDO::PARAM_STR);
     $sth->bindValue(':date', $Date, PDO::PARAM_STR);
     $sth->bindValue(':username', $UserName, PDO::PARAM_STR);
+    $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
     $count = $sth->execute();
 
        // echo the number of affected rows, if count =1 the record (row) was successfully inserted
@@ -162,8 +172,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <input type="submit" value ="submit">
 </form>
-
-
+                <br>
+                <br>
+                <br>
+                </div>
                 </div>
             </div>          
 </body>
