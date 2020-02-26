@@ -123,17 +123,20 @@ require_once('includes/connect.php');
             <br>
             <span class="submit">Date:</span> <input type="date" name="Date"><br>
             <br>
+            <span class="submit">Evidence (Please provide web links to all evidence and proof):</span> <input type="text" name="evidence"><br>
+            <br>
             <span class="submit">Username:</span> <input type="text" name="UserName"><br>
             <?php
 //check to see if form has been submitted, if not the blank entries will be displayed
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// form was submitted, place data into appropriate variables
-	$Game = $_POST["Game"];
-	$Genre = $_POST["Genre"];
-	$Type = $_POST["Type"];
+  $Game = $_POST["Game"];
+  $Genre = $_POST["Genre"];
+  $Type = $_POST["Type"];
   $Time = $_POST["Time"];
   $Platform = $_POST["Platform"];
   $Date = $_POST["Date"];
+  $evidence = $_POST["evidence"];
   $UserName = $_POST["UserName"];
   $timesubmitted = date('Y-m-d H:i:s');
 
@@ -143,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName,timesubmited) VALUES (:game, :genre,:type,:time,:platform,:date,:username,:timesubmited)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName,timesubmited,evidence) VALUES (:game, :genre,:type,:time,:platform,:date,:username,:timesubmited, :evidence)");
     $sth->bindValue(':game', $Game, PDO::PARAM_STR);
     $sth->bindValue(':genre', $Genre, PDO::PARAM_STR);
     $sth->bindValue(':type', $Type, PDO::PARAM_STR);
@@ -152,6 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sth->bindValue(':date', $Date, PDO::PARAM_STR);
     $sth->bindValue(':username', $UserName, PDO::PARAM_STR);
     $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
+    $sth->bindValue(':evidence', $evidence, PDO::PARAM_STR);
     $count = $sth->execute();
 
        // echo the number of affected rows, if count =1 the record (row) was successfully inserted
