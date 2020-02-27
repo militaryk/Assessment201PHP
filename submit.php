@@ -110,9 +110,9 @@ require_once('includes/connect.php');
             </select>
             <br>
             <br>
-            <span class="submit">Time: Hours:</span> <input type="number" name="TimeHour" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="TimeMin" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="TimeSec" min="0" step="1" max="60"><span class="submit">Secs</span><br>
+            <span class="submit">Time: Hours:</span> <input type="number" name="Hours" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60"><span class="submit">Secs</span><br>
             <br>
-            <span class="submit">Platform:</span><select name ="Genre" id="">
+            <span class="submit">Platform:</span><select name ="Platform" id="">
             <option value="PC">PC (Computer)</option>
             <option value="PlayStaion">PlayStaion</option>
             <option value="Xbox">XBOX</option>
@@ -130,15 +130,17 @@ require_once('includes/connect.php');
 //check to see if form has been submitted, if not the blank entries will be displayed
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// form was submitted, place data into appropriate variables
-  $Game = $_POST["Game"];
-  $Genre = $_POST["Genre"];
-  $Type = $_POST["Type"];
-  $Time = $_POST["Time"];
-  $Platform = $_POST["Platform"];
-  $Date = $_POST["Date"];
+  $game = $_POST["Game"];
+  $genre = $_POST["Genre"];
+  $type = $_POST["Type"];
+  $hours = $_POST["Hours"];
+  $minutes = $_POST["Minutes"];
+  $seconds = $_POST["Seconds"];
+  $platform = $_POST["Platform"];
+  $date = $_POST["Date"];
   $evidence = $_POST["evidence"];
-  $UserName = $_POST["UserName"];
-  $timesubmitted = date('Y-m-d H:i:s');
+  $username = $_POST["UserName"];
+  //$timesubmitted = date('Y-m-d H:i:s');
 
 
 	try {
@@ -146,16 +148,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Time,Platform,Date,UserName,timesubmited,evidence) VALUES (:game, :genre,:type,:time,:platform,:date,:username,:timesubmited, :evidence)");
-    $sth->bindValue(':game', $Game, PDO::PARAM_STR);
-    $sth->bindValue(':genre', $Genre, PDO::PARAM_STR);
-    $sth->bindValue(':type', $Type, PDO::PARAM_STR);
-    $sth->bindValue(':time', $Time, PDO::PARAM_STR);
-    $sth->bindValue(':platform', $Platform, PDO::PARAM_STR);
-    $sth->bindValue(':date', $Date, PDO::PARAM_STR);
-    $sth->bindValue(':username', $UserName, PDO::PARAM_STR);
-    $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence) VALUES (:game,:genre,:type,:time,:hours,:minutes,:seconds,:platform,:date,:username,:evidence)");
+    $sth->bindValue(':game', $game, PDO::PARAM_STR);
+    $sth->bindValue(':genre', $genre, PDO::PARAM_STR);
+    $sth->bindValue(':type', $type, PDO::PARAM_STR);
+    $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
+    $sth->bindValue(':date', $date, PDO::PARAM_STR);
+    $sth->bindValue(':username', $username, PDO::PARAM_STR);
+    //$sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
     $sth->bindValue(':evidence', $evidence, PDO::PARAM_STR);
+    $sth->bindValue(':hours', $hours, PDO::PARAM_STR);
+    $sth->bindValue(':minutes', $minutes, PDO::PARAM_STR);
+    $sth->bindValue(':seconds', $seconds, PDO::PARAM_STR);
     $count = $sth->execute();
 
        // echo the number of affected rows, if count =1 the record (row) was successfully inserted
