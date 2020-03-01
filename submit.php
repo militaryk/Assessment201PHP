@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence) VALUES (:game,:genre,:type,:time,:hours,:minutes,:seconds,:platform,:date,:username,:evidence)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence) VALUES (:game,:genre,:type,:hours,:minutes,:seconds,:platform,:date,:username,:evidence)");
     $sth->bindValue(':game', $game, PDO::PARAM_STR);
     $sth->bindValue(':genre', $genre, PDO::PARAM_STR);
     $sth->bindValue(':type', $type, PDO::PARAM_STR);
