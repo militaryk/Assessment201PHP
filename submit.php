@@ -87,7 +87,7 @@ require_once('includes/connect.php');
             <br>
             <br>
             <div class="formbox">
-            <br>
+            <P class="submitheader">Submit Your Results Here<p>
             <form method="post" action="submit.php">
             <span class="submit">Game:</span> <input type="text" name="Game" require="/^[a-zA-Z ]*$/"><br>
             <br>
@@ -110,7 +110,7 @@ require_once('includes/connect.php');
             </select>
             <br>
             <br>
-            <span class="submit">Time: Hours:</span> <input type="number" name="Hours" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60"><span class="submit">Secs</span><br>
+            <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60"><span class="submit">Secs</span><br>
             <br>
             <span class="submit">Platform:</span><select name ="Platform" id="">
             <option value="PC">PC (Computer)</option>
@@ -125,7 +125,10 @@ require_once('includes/connect.php');
             <br>
             <span class="submit">Evidence (Please provide web links to all evidence and proof):</span> <input type="text" name="evidence"><br>
             <br>
-            <span class="submit">Username:</span> <input type="text" name="UserName"><br>
+            <span class="submit">Username:</span> <input type="text" name="UserName">
+            <br>
+            <br>
+            <br>
             <?php
 //check to see if form has been submitted, if not the blank entries will be displayed
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -140,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $date = $_POST["Date"];
   $evidence = $_POST["evidence"];
   $username = $_POST["UserName"];
-  //$timesubmitted = date('Y-m-d H:i:s');
+  $timesubmitted = date('Y-m-d H:i:s');
 
 
 	try {
@@ -148,14 +151,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence) VALUES (:game,:genre,:type,:hours,:minutes,:seconds,:platform,:date,:username,:evidence)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:genre,:type,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
     $sth->bindValue(':game', $game, PDO::PARAM_STR);
     $sth->bindValue(':genre', $genre, PDO::PARAM_STR);
     $sth->bindValue(':type', $type, PDO::PARAM_STR);
     $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
     $sth->bindValue(':date', $date, PDO::PARAM_STR);
     $sth->bindValue(':username', $username, PDO::PARAM_STR);
-    //$sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
+    $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
     $sth->bindValue(':evidence', $evidence, PDO::PARAM_STR);
     $sth->bindValue(':hours', $hours, PDO::PARAM_STR);
     $sth->bindValue(':minutes', $minutes, PDO::PARAM_STR);
