@@ -14,74 +14,74 @@ require_once('includes/connect.php');
 </head>
 <div>
     <div class="head">
-        <nav>
-            <ul>
-                <li class="sub">
-                    <a href="chrome://kill/">Home</a>
-                    <ul>
-                        <li><a href="presentation.html">Details</a></li>
-                        <li class="sub">
-                            <a href="contact.html">contact</a>
-                            <ul>
-                                <li><a href="one.html">One</a></li>
-                                <li><a href="two.html">Two</a></li>
-                                <li class="sub">
-                                    <a href="three.html">Three</a>
-                                    <ul>
-                                        <li><a href="one.html">One</a></li>
-                                        <li><a href="two.html">Two</a></li>
-                                        <li><a href="three.html">Three</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sub">
-                    <a href="sumbit.html">Sumbit Your Results</a>
-                    <ul>
-                        <p> Put Search Bar Hear</p>
-                    </ul>
-                </li>
-                <li class="sub">
-                    <a href="shop.html">Games</a>
-                    <ul>
-                        <li class="sub">
-                            <a href=".html">Sandbox</a>
-                            <ul>
-                                <li><a href="one.html">Minecraft</a></li>
-                                <li><a href="two.html">Factorio</a></li>
-                                <li><a href="three.html">Satisfactoy</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sub">
-                            <a href=".html">Questing</a>
-                            <ul>
-                                <li><a href="one.html">Withcher</a></li>
-                                <li><a href="two.html">Astroneer</a></li>
-                                <li><a href="three.html">Celeste</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sub">
-                            <a href=".html">First Person Shooter</a>
-                            <ul>
-                                <li><a href="one.html">Rainbow Six Siege</a></li>
-                                <li><a href="two.html">Doom</a></li>
-                                <li><a href="three.html">CSGO</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li><a href="news.html">Submit Your Results</a></li>
-            </ul>
-        </nav>
+    <nav>
+                <ul>
+                    <li class="sub">
+                        <a href="index.php">Home</a>
+                        <ul>
+                            <li><a href="Details.html">Details</a></li>
+                            <li class="sub">
+                                <a href="contact.html">contact</a>
+                                <ul>
+                                    <li><a href="one.html">One</a></li>
+                                    <li><a href="two.html">Two</a></li>
+                                    <li class="sub">
+                                        <a href="three.html">Three</a>
+                                        <ul>
+                                            <li><a href="one.html">One</a></li>
+                                            <li><a href="two.html">Two</a></li>
+                                            <li><a href="three.html">Three</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        <a href="#">SearchBar</a>
+                        <ul>
+                            <p> Put Search Bar Hear</p>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        <a href="shop.html">Games</a>
+                        <ul>
+                            <li class="sub">
+                                <a href=".html">Sandbox</a>
+                                <ul>
+                                    <li><a href="one.html">Minecraft</a></li>
+                                    <li><a href="two.html">Factorio</a></li>
+                                    <li><a href="three.html">Satisfactoy</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <a href=".html">Questing</a>
+                                <ul>
+                                    <li><a href="one.html">Withcher</a></li>
+                                    <li><a href="two.html">Astroneer</a></li>
+                                    <li><a href="three.html">Celeste</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <a href=".html">First Person Shooter</a>
+                                <ul>
+                                    <li><a href="one.html">Rainbow Six Siege</a></li>
+                                    <li><a href="two.html">Doom</a></li>
+                                    <li><a href="three.html">CSGO</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="submit.php">Submit Your Results</a></li>
+                </ul>
+            </nav>
             </div>
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>

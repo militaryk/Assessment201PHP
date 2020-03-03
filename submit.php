@@ -14,74 +14,74 @@ require_once('includes/connect.php');
 </head>
 <div>
     <div class="head">
-        <nav>
-            <ul>
-                <li class="sub">
-                    <a href="index.php">Home</a>
-                    <ul>
-                        <li><a href="presentation.html">Details</a></li>
-                        <li class="sub">
-                            <a href="contact.html">contact</a>
-                            <ul>
-                                <li><a href="one.html">One</a></li>
-                                <li><a href="two.html">Two</a></li>
-                                <li class="sub">
-                                    <a href="three.html">Three</a>
-                                    <ul>
-                                        <li><a href="one.html">One</a></li>
-                                        <li><a href="two.html">Two</a></li>
-                                        <li><a href="three.html">Three</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sub">
-                    <a href="sumbit.html">Sumbit Your Results</a>
-                    <ul>
-                        <p> Put Search Bar Hear</p>
-                    </ul>
-                </li>
-                <li class="sub">
-                    <a href="shop.html">Games</a>
-                    <ul>
-                        <li class="sub">
-                            <a href=".html">Sandbox</a>
-                            <ul>
-                                <li><a href="one.html">Minecraft</a></li>
-                                <li><a href="two.html">Factorio</a></li>
-                                <li><a href="three.html">Satisfactoy</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sub">
-                            <a href=".html">Questing</a>
-                            <ul>
-                                <li><a href="one.html">Withcher</a></li>
-                                <li><a href="two.html">Astroneer</a></li>
-                                <li><a href="three.html">Celeste</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sub">
-                            <a href=".html">First Person Shooter</a>
-                            <ul>
-                                <li><a href="one.html">Rainbow Six Siege</a></li>
-                                <li><a href="two.html">Doom</a></li>
-                                <li><a href="three.html">CSGO</a></li>
-                                <li><a href="three.html">More</a></li>      
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li><a href="news.html">Submit Your Results</a></li>
-            </ul>
-        </nav>
+    <nav>
+                <ul>
+                    <li class="sub">
+                        <a href="index.php">Home</a>
+                        <ul>
+                            <li><a href="Details.html">Details</a></li>
+                            <li class="sub">
+                                <a href="contact.html">contact</a>
+                                <ul>
+                                    <li><a href="one.html">One</a></li>
+                                    <li><a href="two.html">Two</a></li>
+                                    <li class="sub">
+                                        <a href="three.html">Three</a>
+                                        <ul>
+                                            <li><a href="one.html">One</a></li>
+                                            <li><a href="two.html">Two</a></li>
+                                            <li><a href="three.html">Three</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        <a href="#">SearchBar</a>
+                        <ul>
+                            <p> Put Search Bar Hear</p>
+                        </ul>
+                    </li>
+                    <li class="sub">
+                        <a href="shop.html">Games</a>
+                        <ul>
+                            <li class="sub">
+                                <a href=".html">Sandbox</a>
+                                <ul>
+                                    <li><a href="one.html">Minecraft</a></li>
+                                    <li><a href="two.html">Factorio</a></li>
+                                    <li><a href="three.html">Satisfactoy</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <a href=".html">Questing</a>
+                                <ul>
+                                    <li><a href="one.html">Withcher</a></li>
+                                    <li><a href="two.html">Astroneer</a></li>
+                                    <li><a href="three.html">Celeste</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <a href=".html">First Person Shooter</a>
+                                <ul>
+                                    <li><a href="one.html">Rainbow Six Siege</a></li>
+                                    <li><a href="two.html">Doom</a></li>
+                                    <li><a href="three.html">CSGO</a></li>
+                                    <li><a href="three.html">More</a></li>      
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="submit.php">Submit Your Results</a></li>
+                </ul>
+            </nav>
             </div>
             <div class="bodybox">
             <br>
@@ -167,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
        // echo the number of affected rows, if count =1 the record (row) was successfully inserted
     if($count == 1){
-    	echo "record added to database";
+    	echo "<p class=submit>Data has been submitted</p>";
     	}
 
     // close the database connection 

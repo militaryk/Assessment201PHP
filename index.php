@@ -89,28 +89,12 @@ require_once('includes/connect.php');
                     <div class="item1"></div>
                     <div class="item2"></div>
                     <a class="item4" ><div></div></a>
-                    <a class="item5" ><div></div></a>
-                   <div class="item6"></div>
                    <a class="item2-1" ><div></div></a>
                    <a class="item2-2" ><div></div></a>
                    <a class="item2-3" ><div></div></a>
-                   <a class="item2-4" ><div></div></a>
-                   <a class="item2-5" ><div></div></a>
                    <a class="item3-1" ><div></div></a>
                    <a class="item3-2" ><div></div></a>
                    <a class="item3-3" ><div></div></a>
-                   <a class="item3-4" ><div></div></a>
-                   <a class="item3-5" ><div></div></a>
-                   <a class="item4-1" ><div></div></a>
-                   <a class="item4-2" ><div></div></a>
-                   <a class="item4-3" ><div></div></a>
-                   <a class="item4-4" ><div></div></a>
-                   <a class="item4-5" ><div></div></a>
-                   <a class="item5-1" ><div></div></a>
-                   <a class="item5-2" ><div></div></a>
-                   <a class="item5-3" ><div></div></a>
-                   <a class="item5-4" ><div></div></a>
-                   <a class="item5-5" ><div></div></a>
                   </div>
                 </div>
             </div>          
