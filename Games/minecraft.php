@@ -17,7 +17,7 @@ require_once('../includes/connect.php');
     <nav>
                 <ul>
                     <li class="sub">
-                        <a href="index.php">Home</a>
+                        <a href="../index.php">Home</a>
                         <ul>
                             <li><a href="Details.html">Details</a></li>
                             <li class="sub">
@@ -44,12 +44,12 @@ require_once('../includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="shop.html">Games</a>
+                        <a href="../games.php">Games</a>
                         <ul>
                             <li class="sub">
                                 <a href=".html">Sandbox</a>
                                 <ul>
-                                    <li><a href="one.html">Minecraft</a></li>
+                                    <li><a href="#.html">Minecraft</a></li>
                                     <li><a href="two.html">Factorio</a></li>
                                     <li><a href="three.html">Satisfactoy</a></li>
                                     <li><a href="three.html">More</a></li>      
@@ -79,7 +79,7 @@ require_once('../includes/connect.php');
                             
                         </ul>
                     </li>
-                    <li><a href="submit.php">Submit Your Results</a></li>
+                    <li><a href="../submit.php">Submit Your Results</a></li>
                 </ul>
             </nav>
             </div>
@@ -100,13 +100,15 @@ require_once('../includes/connect.php');
 				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
 					<h3>First Diamond</h3>
-					<table>
+					<table class="table">
                         <tr>
                             <th>Game</th>
                             <th>Hours</th>
                             <th>Minutes</th>
                             <th>Seconds</th>
                             <th>Platform</th>
+                            <th>Username</th>
+                            <th>Evidence</th>
                         </tr>
                         <br>
                         <?php
@@ -119,8 +121,9 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Minutes']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
+                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
                         <?php } ?>
-
                     </table>
 				</span>
 			</div> 

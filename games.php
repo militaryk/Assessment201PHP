@@ -8,16 +8,16 @@ require_once('includes/connect.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
+    <script async src="../js/tabs.js"></script>
     <title>Document</title>
 </head>
 <div>
     <div class="head">
-        <nav>
+    <nav>
                 <ul>
                     <li class="sub">
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                         <ul>
                             <li><a href="Details.html">Details</a></li>
                             <li class="sub">
@@ -44,20 +44,20 @@ require_once('includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="games.php">Games</a>
+                        <a href="#">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="sandboxgames.php">Sandbox</a>
+                                <a href="games/sandboxgames.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
-                                    <li><a href="two.html">Factorio</a></li>
-                                    <li><a href="three.html">Satisfactoy</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="games/factoro.php">Factorio</a></li>
+                                    <li><a href="games/satisfacotry.php">Satisfactoy</a></li>
+                                    <li><a href="games/more">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="questinggames.php">Questing</a>
+                                <a href="games/questinggames.php">Questing</a>
                                 <ul>
                                     <li><a href="one.html">Withcher</a></li>
                                     <li><a href="two.html">Astroneer</a></li>
@@ -67,7 +67,7 @@ require_once('includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="fpvgames.php">First Person Shooter</a>
+                                <a href="games/fpvgames.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="one.html">Rainbow Six Siege</a></li>
                                     <li><a href="two.html">Doom</a></li>
@@ -84,18 +84,15 @@ require_once('includes/connect.php');
             </nav>
             </div>
             <div class="bodybox">
-                <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
-                    <div class="gridcontainer">
-                    <div class="item1"></div>
-                    <div class="item2"></div>
-                    <a class="item4" ><div></div></a>
-                   <a class="item2-1" ><div></div></a>
-                   <a class="item2-2" ><div></div></a>
-                   <a class="item2-3" ><div></div></a>
-                   <a class="item3-1" ><div></div></a>
-                   <a class="item3-2" ><div></div></a>
-                   <a class="item3-3" ><div></div></a>
-                  </div>
+            <br>
+            <br>
+            <div class="formbox">
+            <P class="submitheader">Games<p>
+</div>
+                <br>
+                <br>
+                <br>
+                </div>
                 </div>
             </div>          
 </body>

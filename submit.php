@@ -44,30 +44,30 @@ require_once('includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="shop.html">Games</a>
+                        <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href=".html">Sandbox</a>
+                                <a href="/games/sandboxgames.php">Sandbox</a>
                                 <ul>
-                                    <li><a href="one.html">Minecraft</a></li>
-                                    <li><a href="two.html">Factorio</a></li>
-                                    <li><a href="three.html">Satisfactoy</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="/games/minecraft.php">Minecraft</a></li>
+                                    <li><a href="/games/two.html">Factorio</a></li>
+                                    <li><a href="/games/three.html">Satisfactoy</a></li>
+                                    <li><a href="/games/three.html">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href=".html">Questing</a>
+                                <a href="/games/questinggames.php">Questing</a>
                                 <ul>
-                                    <li><a href="one.html">Withcher</a></li>
-                                    <li><a href="two.html">Astroneer</a></li>
+                                    <li><a href="/games/one.html">Withcher</a></li>
+                                    <li><a href="/games/two.html">Astroneer</a></li>
                                     <li><a href="three.html">Celeste</a></li>
                                     <li><a href="three.html">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href=".html">First Person Shooter</a>
+                                <a href="fpvgames.html">First Person Shooter</a>
                                 <ul>
                                     <li><a href="one.html">Rainbow Six Siege</a></li>
                                     <li><a href="two.html">Doom</a></li>
