@@ -69,8 +69,7 @@ require_once('includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>
-            </div>
+            </nav>            </div>
             <div class="bodybox">
             <br>
             <br>

@@ -14,26 +14,14 @@ require_once('includes/connect.php');
 </head>
 <div>
     <div class="head">
-        <nav>
+    <nav>
                 <ul>
                     <li class="sub">
-                        <a href="#">Home</a>
+                        <a href="index.php">Home</a>
                         <ul>
-                            <li><a href="Details.html">Details</a></li>
+                            <li><a href="Details.php">Details</a></li>
                             <li class="sub">
-                                <a href="contact.html">contact</a>
-                                <ul>
-                                    <li><a href="one.html">One</a></li>
-                                    <li><a href="two.html">Two</a></li>
-                                    <li class="sub">
-                                        <a href="three.html">Three</a>
-                                        <ul>
-                                            <li><a href="one.html">One</a></li>
-                                            <li><a href="two.html">Two</a></li>
-                                            <li><a href="three.html">Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <a href="contact.php">contact</a>
                             </li>
                         </ul>
                     </li>
@@ -44,35 +32,35 @@ require_once('includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="games.php">Games</a>
+                        <a href="#">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="sandboxgames.php">Sandbox</a>
+                                <a href="games/sandboxgames.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
-                                    <li><a href="two.html">Factorio</a></li>
-                                    <li><a href="three.html">Satisfactoy</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="games/factorio.php">Factorio</a></li>
+                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>
+                                    <li><a href="games/more">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="questinggames.php">Questing</a>
+                                <a href="games/questinggames.php">Questing</a>
                                 <ul>
-                                    <li><a href="one.html">Withcher</a></li>
-                                    <li><a href="two.html">Astroneer</a></li>
-                                    <li><a href="three.html">Celeste</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="games/witcher.php">Withcher</a></li>
+                                    <li><a href="games/astroneer.php">Astroneer</a></li>
+                                    <li><a href="games/celeste.php">Celeste</a></li>
+                                    <li><a href="games/more.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="fpvgames.php">First Person Shooter</a>
+                                <a href="games/fpvgames.php">First Person Shooter</a>
                                 <ul>
-                                    <li><a href="one.html">Rainbow Six Siege</a></li>
-                                    <li><a href="two.html">Doom</a></li>
-                                    <li><a href="three.html">CSGO</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
+                                    <li><a href="games/doom.php">Doom</a></li>
+                                    <li><a href="games/CSGO.php">CSGO</a></li>
+                                    <li><a href="games/CSGO.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
@@ -81,8 +69,7 @@ require_once('includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>
-            </div>
+            </nav>            </div>
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">

@@ -50,7 +50,7 @@ require_once('../includes/connect.php');
                                 <a href="sandboxgames.php">Sandbox</a>
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
-                                    <li><a href="factoro.php">Factorio</a></li>
+                                    <li><a href="factorio.php">Factorio</a></li>
                                     <li><a href="satisfacotry.php">Satisfactoy</a></li>
                                     <li><a href="more.php">More</a></li>      
                                     </li>
@@ -59,20 +59,20 @@ require_once('../includes/connect.php');
                             <li class="sub">
                                 <a href="questinggames.php">Questing</a>
                                 <ul>
-                                    <li><a href="one.html">Withcher</a></li>
-                                    <li><a href="two.html">Astroneer</a></li>
-                                    <li><a href="three.html">Celeste</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="witcher.html">Withcher</a></li>
+                                    <li><a href="astroneer.html">Astroneer</a></li>
+                                    <li><a href="celeste.html">Celeste</a></li>
+                                    <li><a href="more.html">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
                                 <a href="fpvgames.php">First Person Shooter</a>
                                 <ul>
-                                    <li><a href="one.html">Rainbow Six Siege</a></li>
-                                    <li><a href="two.html">Doom</a></li>
-                                    <li><a href="three.html">CSGO</a></li>
-                                    <li><a href="three.html">More</a></li>      
+                                    <li><a href="r6siege.html">Rainbow Six Siege</a></li>
+                                    <li><a href="doom.html">Doom</a></li>
+                                    <li><a href="CSGO.html">CSGO</a></li>
+                                    <li><a href="more.html">More</a></li>      
                                     </li>
                                 </ul>
                             </li>

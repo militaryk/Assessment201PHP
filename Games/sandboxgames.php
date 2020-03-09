@@ -50,7 +50,7 @@ require_once('../includes/connect.php');
                                 <a href="sandboxgames.php">Sandbox</a>
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
-                                    <li><a href="factoro.php">Factorio</a></li>
+                                    <li><a href="factorio.php">Factorio</a></li>
                                     <li><a href="satisfacotry.php">Satisfactoy</a></li>
                                     <li><a href="more.php">More</a></li>      
                                     </li>
@@ -81,8 +81,7 @@ require_once('../includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>
-            </div>
+            </nav>            </div>
             <div class="bodybox">
             <br>
             <br>
