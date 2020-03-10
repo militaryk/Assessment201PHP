@@ -26,13 +26,7 @@ require_once('includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        <a href="#">Games</a>
+                        <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
                                 <a href="games/sandboxgames.php">Sandbox</a>
@@ -66,6 +60,12 @@ require_once('includes/connect.php');
                             </li>
                             
                         </ul>
+                        <li class="sub">
+                        <a href="#">SearchBar</a>
+                        <ul>
+                            <p> Put Search Bar Hear</p>
+                        </ul>
+                    </li>
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>

@@ -32,7 +32,7 @@ require_once('includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="#">Games</a>
+                        <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
                                 <a href="games/sandboxgames.php">Sandbox</a>

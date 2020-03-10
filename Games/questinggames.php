@@ -19,21 +19,9 @@ require_once('../includes/connect.php');
                     <li class="sub">
                         <a href="../index.php">Home</a>
                         <ul>
-                            <li><a href="Details.html">Details</a></li>
+                            <li><a href="../Details.php">Details</a></li>
                             <li class="sub">
-                                <a href="contact.html">contact</a>
-                                <ul>
-                                    <li><a href="one.html">One</a></li>
-                                    <li><a href="two.html">Two</a></li>
-                                    <li class="sub">
-                                        <a href="three.html">Three</a>
-                                        <ul>
-                                            <li><a href="one.html">One</a></li>
-                                            <li><a href="two.html">Two</a></li>
-                                            <li><a href="three.html">Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <a href="../contact.php">contact</a>
                             </li>
                         </ul>
                     </li>
@@ -44,42 +32,42 @@ require_once('../includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="#">Games</a>
+                        <a href="../games.php">Games</a>
                         <ul>
                             <li class="sub">
                                 <a href="sandboxgames.php">Sandbox</a>
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
-                                    <li><a href="satisfacotry.php">Satisfactoy</a></li>
-                                    <li><a href="more.php">More</a></li>      
+                                    <li><a href="satisfactory.php">Satisfactoy</a></li>
+                                    <li><a href="more">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
                                 <a href="questinggames.php">Questing</a>
                                 <ul>
-                                    <li><a href="witcher.html">Withcher</a></li>
-                                    <li><a href="astroneer.html">Astroneer</a></li>
-                                    <li><a href="celeste.html">Celeste</a></li>
-                                    <li><a href="more.html">More</a></li>      
+                                    <li><a href="witcher.php">Withcher</a></li>
+                                    <li><a href="astroneer.php">Astroneer</a></li>
+                                    <li><a href="celeste.php">Celeste</a></li>
+                                    <li><a href="more.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
                                 <a href="fpvgames.php">First Person Shooter</a>
                                 <ul>
-                                    <li><a href="r6siege.html">Rainbow Six Siege</a></li>
-                                    <li><a href="doom.html">Doom</a></li>
-                                    <li><a href="CSGO.html">CSGO</a></li>
-                                    <li><a href="more.html">More</a></li>      
+                                    <li><a href="r6seige.php">Rainbow Six Siege</a></li>
+                                    <li><a href="doom.php">Doom</a></li>
+                                    <li><a href="CSGO.php">CSGO</a></li>
+                                    <li><a href="CSGO.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             
                         </ul>
                     </li>
-                    <li><a href="submit.php">Submit Your Results</a></li>
+                    <li><a href="../submit.php">Submit Your Results</a></li>
                 </ul>
             </nav>
             </div>
