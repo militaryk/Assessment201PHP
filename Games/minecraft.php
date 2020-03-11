@@ -89,6 +89,7 @@ require_once('../includes/connect.php');
 				<span class="col-md-10">
 					<h3>First Diamond</h3>
 					<table class="table">
+                        <thead>
                         <tr>
                             <th>Game</th>
                             <th>Hours</th>
@@ -98,9 +99,10 @@ require_once('../includes/connect.php');
                             <th>Username</th>
                             <th>Evidence</th>
                         </tr>
-                        <br>
+                        </thead>
+                        <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Platform` = 'PC'")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Platform` = 'PC' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
                         <tr>
@@ -112,6 +114,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
                         <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
                         <?php } ?>
+                        </tbody>
                     </table>
 				</span>
 			</div> 

@@ -331,11 +331,13 @@ nav li > ul > li:hover > ul  {
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    font-size: 70%;
   }
   th {
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    font-size: 70%;
   }
   .scale {
     font-size: 100%;
