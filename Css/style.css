@@ -50,7 +50,7 @@ nav  li > ul li a {
     color: #111111;
     display: block;
     line-height: 2em;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
     text-decoration: none;
 }
 
@@ -275,7 +275,7 @@ nav li > ul > li:hover > ul  {
     font-size: 150%;
   }
   .container--tabs {
-    margin: 2rem;
+    margin: 0;
   }
   .container--tabs .nav-tabs {
     float: left;
@@ -283,6 +283,9 @@ nav li > ul > li:hover > ul  {
     margin: 0;
     list-style-type: none;
     border-bottom: 1px solid #ddd;
+    padding-inline-start: 0px;
+    padding-bottom: 1px;
+
   }
   .container--tabs .nav-tabs > li {
     float: left;
@@ -293,16 +296,18 @@ nav li > ul > li:hover > ul  {
     margin-right: 2px;
     line-height: 1.42857143;
     padding: 10px;
-    border: 1px solid transparent;
+    border: 1px solid gray;
     border-radius: 4px 4px 0 0;
+    background-color: gray;
   }
   .container--tabs .nav-tabs > li > a:hover {
     border-color: #eee #eee #ddd;
   }
   .container--tabs .nav-tabs > li.active > a,
   .container--tabs .nav-tabs > li.active > a:hover,
-  .container--tabs .nav-tabs > li.active > a:focus {
+  .container--tabs .nav-tabs > li.active > a:foc  us {
     color: #555;
+    text-decoration: none;
     cursor: default;
     background-color: #fff;
     border: 1px solid #ddd;

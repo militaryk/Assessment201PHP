@@ -84,7 +84,7 @@ require_once('../includes/connect.php');
 			<li class=""><a href="#tab-3">Kill the Ender Dragon</a></li>
 		    </ul>
 		    <div class="tab-content">
-			<div id="tab-1" class="tab-pane active"> 
+			<div id="tab-1" class="tab-pane active" style="overflow-x:auto;"> 
 				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
 					<h3>First Diamond</h3>
