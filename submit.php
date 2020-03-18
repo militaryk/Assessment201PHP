@@ -8,7 +8,7 @@ require_once('includes/connect.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <script async src="js/tabs.js"></script>
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
     <title>Document</title>
 </head>
@@ -76,32 +76,33 @@ require_once('includes/connect.php');
             <div class="formbox">
             <P class="submitheader">Submit Your Results Here<p>
             <form method="post" action="submit.php">
-            <span class="submit">Game:</span> <input type="text" name="Game" require="/^[a-zA-Z ]*$/"><br>
-            <br>
-            <span class="submit">Genre:</span> <select name ="Genre" id="">
-            <option value="Sandbox">Sandbox</option>
-            <option value="FPV">First Person Shooter</option>
-            <option value="Quest">Quest</option>
-            <option value="Survival">Survival</option>
+            <span class="submit">Game</span><select name ="Game" id="game_selector">
+            <option value="Astroneer">Astroneer</option>
+            <option value="Celeste">Celeste</option>
+            <option value="CSGO">CSGO</option>
+            <option value="Doom">Doom</option>
+            <option value="Factorio">Factorio</option>
+            <option value="Minecraft">Minecraft</option>
+            <option value="RainbowSix">Rainbow Six Siege</option>
+            <option value="Satisfactory">Satisfactory</option>
+            <option value="Witcher">Witcher</option>
             </select>
             <br>
+            <span class="game_only" data-game="Minecraft">
+            <span class="submit">Catagories</span><select name ="Game" id="1">
+            <option value="AlLAcheivment">All Acheivments</option>
+            <option value="KillEnderdragon">Kill Enderdragon</option>
+            <option value="FirstDiamond">First Diamond</option>
             <br>
-            <span class="submit">Type Of Game:</span> <select name ="Type" id="">
-            <option value="PC">Action Games</option>
-            <option value="PlayStaion">Action-Adventure Games</option>
-            <option value="Xbox">Adventure Games</option>
-            <option value="Nintendo">Role-Playing</option>
-            <option value="Android">Simulation</option>
-            <option value="Android">Stratergy</option>
-            <option value="Android">Puzzle Games</option>
             </select>
             <br>
+            </span>
             <br>
             <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60"><span class="submit">Secs</span><br>
             <br>
             <span class="submit">Platform:</span><select name ="Platform" id="">
             <option value="PC">PC (Computer)</option>
-            <option value="PlayStaion">PlayStaion</option>
+            <option value="PlayStation">PlayStation</option>
             <option value="Xbox">XBOX</option>
             <option value="Nintendo">Nintendo</option>
             <option value="Android">Android</option>
@@ -121,8 +122,6 @@ require_once('includes/connect.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// form was submitted, place data into appropriate variables
   $game = $_POST["Game"];
-  $genre = $_POST["Genre"];
-  $type = $_POST["Type"];
   $hours = $_POST["Hours"];
   $minutes = $_POST["Minutes"];
   $seconds = $_POST["Seconds"];
@@ -138,10 +137,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Genre,Type,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:genre,:type,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
     $sth->bindValue(':game', $game, PDO::PARAM_STR);
-    $sth->bindValue(':genre', $genre, PDO::PARAM_STR);
-    $sth->bindValue(':type', $type, PDO::PARAM_STR);
     $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
     $sth->bindValue(':date', $date, PDO::PARAM_STR);
     $sth->bindValue(':username', $username, PDO::PARAM_STR);
