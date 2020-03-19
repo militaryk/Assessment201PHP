@@ -88,11 +88,90 @@ require_once('includes/connect.php');
             <option value="Witcher">Witcher</option>
             </select>
             <br>
+            <span class="game_only" data-game="Astroneer">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Pre Release">Pre Release</option>
+            <option value="Post Release">Post Release</option>
+            <option value="To Orbit">To Orbit</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            <span class="game_only" data-game="Celeste">
+            <br>
+            <span class="submit">Categories</span><select name ="Catergory" id="1">
+            <option value="Complete Game">Complete Full Game</option>
+            <option value="Collect All Strawberries">Collect all Strawberries</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            <span class="game_only" data-game="CSGO">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Weapons Course">Weapons Course</option>
+            <option value="Any%">Any%</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            </span>
+            <span class="game_only" data-game="Factorio">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Any%">Any%</option>
+            <option value="Research All Researches">Research All Researches</option>
+            <option value="Complete All Achievments">Complete All Achievments</option>
+            <option value="Complete Game NO CONVEYORS">Complete Game NO CONVEYORS</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            </span>
+            <span class="game_only" data-game="Doom">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Gain all Achievments">Gain all Achievments</option>
+            <option value="Any%">Any%</option>
+            <br>
+            </select>
+            <br>
+            </span>
             <span class="game_only" data-game="Minecraft">
-            <span class="submit">Catagories</span><select name ="Game" id="1">
-            <option value="AlLAcheivment">All Acheivments</option>
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="AlLAcheivment">All Achievments</option>
             <option value="KillEnderdragon">Kill Enderdragon</option>
             <option value="FirstDiamond">First Diamond</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            <span class="game_only" data-game="RainbowSix">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Complete All Situations">Complete All Situations</option>
+            <option value="Classic Terrorist Hunt Random Loadout">Classic Terrorist Hunt Random Loadout</option>
+            <option value="Classic Terrorist Hunt Chosen Loadout">Classic Terrorist Hunt Chosen Loadout</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            <span class="game_only" data-game="Satisfactory">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Complete Game">Complete Game</option>
+            <option value="Any%">Any%</option>
+            <br>
+            </select>
+            <br>
+            </span>
+            <span class="game_only" data-game="Witcher">
+            <br>
+            <span class="submit">Categories</span><select name ="Category" id="1">
+            <option value="Complete Game">Complete Full Game</option>
+            <option value="Any%">Any%</option>
             <br>
             </select>
             <br>
@@ -122,6 +201,7 @@ require_once('includes/connect.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// form was submitted, place data into appropriate variables
   $game = $_POST["Game"];
+  $category = $_POST["Category"];
   $hours = $_POST["Hours"];
   $minutes = $_POST["Minutes"];
   $seconds = $_POST["Seconds"];
@@ -137,8 +217,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
+    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Category,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:category,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
     $sth->bindValue(':game', $game, PDO::PARAM_STR);
+    $sth->bindValue(':category', $category, PDO::PARAM_STR);
     $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
     $sth->bindValue(':date', $date, PDO::PARAM_STR);
     $sth->bindValue(':username', $username, PDO::PARAM_STR);

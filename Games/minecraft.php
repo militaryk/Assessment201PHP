@@ -102,7 +102,7 @@ require_once('../includes/connect.php');
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Platform` = 'PC' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'Minecraft' AND `Platform` = 'PC' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
                         <tr>
