@@ -329,20 +329,22 @@ nav li > ul > li:hover > ul  {
     display: block;
   }
   table {
-    width: 10%;
     font-size: 2.5vw;
+    border-collapse: collapse;
   }
   td {
     border-style: solid;
     border-width: 1px;
     border-color: black;
     font-size: 70%;
+    text-align: center;
   }
   th {
     border-style: solid;
     border-width: 1px;
     border-color: black;
     font-size: 70%;
+    text-align: center;
   }
   .scale {
     font-size: 100%;

@@ -87,7 +87,20 @@ require_once('../includes/connect.php');
 			<div id="tab-1" class="tab-pane active" style="overflow-x:auto;"> 
 				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
-					<h3>First Diamond</h3>
+                    <h1>All Acheivments</h1> 
+                    <span class="platformselect">
+                    <br>
+                    <span class="platformselection">Select Platform</span><select id="1">
+                    <option value="PC">All Platforms</option>
+                    <option value="Playstation">Playstation</option>
+                    <option value="Complete All Achievments">Complete All Achievments</option>
+                    <option value="Complete Game NO CONVEYORS">Complete Game NO CONVEYORS</option>
+                    <br>
+                    <br>
+</br>
+                    </select>
+                    <br>
+                    </span>
 					<table class="table">
                         <thead>
                         <tr>
@@ -102,9 +115,10 @@ require_once('../includes/connect.php');
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'Minecraft' AND `Platform` = 'PC' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
+
                         <tr>
                         <td> <?php echo htmlspecialchars($row['Game']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
