@@ -76,6 +76,17 @@ require_once('../includes/connect.php');
             <br>
             <div class="formbox">
             <P class="submitheader">Minecraft<p>
+            <span class="platformselect">
+                    <br>
+                    <span class="platformselection">Select Platform</span><select id="1">
+                    <option value="PC">All Platforms</option>
+                    <option value="PC">PC</option>
+                    <option value="XBOX">XBOX</option>
+                    <option value="Playstation">Playstation</option>
+                    <br>
+                    <br>
+                    <br>
+                    </select>
             <div class="container--tabs">
 	        <section class="row">
 		    <ul class="nav nav-tabs">
@@ -100,7 +111,7 @@ require_once('../includes/connect.php');
                         </tr>
                         <br>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Platform` = 'PC'")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'celeste' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
                         <tr>

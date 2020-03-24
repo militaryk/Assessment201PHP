@@ -92,12 +92,13 @@ require_once('../includes/connect.php');
                     <br>
                     <span class="platformselection">Select Platform</span><select id="1">
                     <option value="PC">All Platforms</option>
+                    <option value="PC">PC</option>
+                    <option value="XBOX">XBOX</option>
                     <option value="Playstation">Playstation</option>
-                    <option value="Complete All Achievments">Complete All Achievments</option>
-                    <option value="Complete Game NO CONVEYORS">Complete Game NO CONVEYORS</option>
+                    <option value="Nintendo">Android</option>
                     <br>
                     <br>
-</br>
+                    <br>
                     </select>
                     <br>
                     </span>
