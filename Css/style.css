@@ -37,7 +37,7 @@ nav > ul > li > a {
 
 nav li > ul{
     display : none;
-    margin-top:1px;
+    /* margin-top:1px; */
     background-color: rgb(255, 255, 255);
 
 }
@@ -131,15 +131,13 @@ nav li > ul > li:hover > ul  {
     grid-template-rows: repeat(3, 40vh) ;
   }
 
-
-    
+/* */
     .item1 {
-    background-color: #1abc9c;
+    background-image: url(../images/minecraft.jpg);
       grid-row: 1 / 1;
       grid-column: 1 / 1;
-      background-size: 75%;
       margin: 2vh;
-      ;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
       z-index: 1;
@@ -150,6 +148,7 @@ nav li > ul > li:hover > ul  {
      grid-row: 2;
      margin: 2vh;
      z-index: 1;
+     background-size: 100% 100%;
    }
   
   
@@ -162,6 +161,7 @@ nav li > ul > li:hover > ul  {
      background-position: center;
      margin: 2vh;
      z-index: 1;
+     background-size: 100% 100%;
    }
   
   
@@ -174,6 +174,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
    .item2-2 {
     background-color: #bdc3c7;
@@ -184,6 +185,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
    .item2-3 {
     background-color: #bdc3c7;
@@ -194,6 +196,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
    .item3-1 {
     background-color: #bdc3c7;
@@ -204,6 +207,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
    .item3-2 {
     background-color: #bdc3c7;
@@ -214,6 +218,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
    .item3-3 {
     background-color: #bdc3c7;
@@ -224,6 +229,7 @@ nav li > ul > li:hover > ul  {
     background-position: center;
     margin: 2vh;
     z-index: 1;
+    background-size: 100% 100%;
    }
   
     [class^="item"] {
@@ -244,9 +250,10 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 500px;
     margin: 0 ;
     width: 100%;
-    height: 100px;
-    max-height: 100px;
+    height: 140px;
+    max-height: 140px;
     background-size: cover;
+    background-color: #040404;
   }
   .gamedisplay {
     background-color:black;
@@ -264,7 +271,7 @@ nav li > ul > li:hover > ul  {
     background-color:rgb(245, 245, 245,0.1);
     margin-left: 5%;
     margin-right: 5%;
-    height: 100vh;
+    height: 400vh;
     border-width: 2px;
     border-color: rgba(250, 250, 250, 0.6);
     border-style: solid;
@@ -298,7 +305,7 @@ nav li > ul > li:hover > ul  {
     padding: 10px;
     border: 1px solid gray;
     border-radius: 4px 4px 0 0;
-    background-color: gray;
+    background-color: darkolivegreen;
   }
   .container--tabs .nav-tabs > li > a:hover {
     border-color: #eee #eee #ddd;
@@ -349,3 +356,49 @@ nav li > ul > li:hover > ul  {
   .scale {
     font-size: 100%;
   }
+  .gamedetails {
+    color: white;
+  }
+  .typeblurb {
+    font-size: 100%;
+  }
+  .submitresults {
+    float: left;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    float: right;
+  }
+  .tabbutton {
+    color: white;
+    text-decoration: none;
+  }
+  header {
+    color: white;
+    font-size: 8vw;
+    padding-top: 0;
+    text-align: center;
+  }
+  @media(min-width:430px) {
+    header {
+      float: right;
+      padding-right: 4vw;
+    }
+  }
+  footer {
+    background-color: #333; 
+    background-size: cover;
+    margin-top: 2.5%;
+    text-align: center;
+    color: #fff;
+
+}

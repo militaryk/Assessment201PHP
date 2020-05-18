@@ -10,10 +10,13 @@ require_once('../includes/connect.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Css/style.css" type="text/css" charset="utf-8">
     <script async src="../js/tabs.js"></script>
-    <title>Document</title>
+    <title>Gamerun - Celeste</title>
+    <meta name="theme-color"content="#317EFB" >
 </head>
 <div>
+    <!-- Div class Head at top of page contains, Navigation and Title -->
     <div class="head">
+        <header>Gamerun</header>
     <nav>
                 <ul>
                     <li class="sub">
@@ -26,18 +29,12 @@ require_once('../includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
-                        </ul>
-                    </li>
-                    <li class="sub">
                         <a href="../games.php">Games</a>
                         <ul>
                             <li class="sub">
                                 <a href="sandboxgames.php">Sandbox</a>
                                 <ul>
-                                    <li><a href="minecraft.php">Minecraft</a></li>
+                                    <li><a href="Minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
                                     <li><a href="satisfactory.php">Satisfactoy</a></li>
                                     <li><a href="more">More</a></li>      
@@ -71,35 +68,38 @@ require_once('../includes/connect.php');
                 </ul>
             </nav>
             </div>
+            <!-- Div class Bodybox contains the main content of the page in a light grey colour box. This box helps the content stay responsive and adds a layer to contrast the main content on to make it more useable -->
             <div class="bodybox">
             <br>
             <br>
             <div class="formbox">
-            <P class="submitheader">Minecraft<p>
-            <span class="platformselect">
-                    <br>
-                    <span class="platformselection">Select Platform</span><select id="1">
-                    <option value="PC">All Platforms</option>
-                    <option value="PC">PC</option>
-                    <option value="XBOX">XBOX</option>
-                    <option value="Playstation">Playstation</option>
-                    <br>
-                    <br>
-                    <br>
-                    </select>
+            <!-- Header of the page. Gives the game that this page is focused on -->
+            <p class="submitheader">Celeste<p>
+                <!-- Details of the game in Question -->
+                <p class="gamedetails">"Celeste is a platforming video game by Canadian video game developers Matt Thorson and Noel Berry, with art by the Brazilian studio MiniBoss. The game was originally created as a prototype in four days during a game jam, and later expanded into a full release. Celeste was released in January 2018 on Microsoft Windows, Nintendo Switch, PlayStation 4, Xbox One, macOS, and Linux. A DLC chapter entitled "Farewell" was released on September 9, 2019"-Wikipedia</p>
+            <!-- This class is the begining of my tab system that displays content dependent on what Tab the user selects -->
             <div class="container--tabs">
 	        <section class="row">
 		    <ul class="nav nav-tabs">
-			<li class="active"><a href="#tab-1">All the Acheivments</a></li>
-			<li class=""><a href="#tab-2">First Diamond</a></li>
-			<li class=""><a href="#tab-3">Kill the Ender Dragon</a></li>
+            <!-- List of Buttons to switch between the tabs -->
+			<li class="active"><a href="#tab-1" class="tabbutton">Complete Game</a></li>
+			<li class=""><a href="#tab-2" class="tabbutton">Collect All Strawberries</a></li>
 		    </ul>
 		    <div class="tab-content">
-			<div id="tab-1" class="tab-pane active"> 
-				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+            <!-- This Div class tab-conent handels the responsiveness of tabs -->
+            <div id="tab-1" class="tab-pane active" style="overflow-x:auto;">
 				<span class="col-md-10">
-					<h3>First Diamond</h3>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                    <h1>All Acheivments</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    All Achievements in Celeste is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Celeste. Achievements are achieved in Celeste by completing specific tasks and progressing along the achievement tree.
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
+                        <thead>
                         <tr>
                             <th>Game</th>
                             <th>Hours</th>
@@ -109,11 +109,13 @@ require_once('../includes/connect.php');
                             <th>Username</th>
                             <th>Evidence</th>
                         </tr>
-                        <br>
+                        </thead>
+                        <tbody>
                         <?php
                         foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'celeste' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
+
                         <tr>
                         <td> <?php echo htmlspecialchars($row['Game']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
@@ -123,21 +125,51 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
                         <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
                         <?php } ?>
+                        </tbody>
                     </table>
 				</span>
-			</div> 
+            </div> 
+            
 			<div id="tab-2" class="tab-pane">
-				<span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
-					<h3>Kill the Ender Dragon</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				</span>
-			</div>
-			<div id="tab-3" class="tab-pane">
-				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
-				<span class="col-md-10">
-					<h3>All the Acheivments</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                <h1>First Diamond</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    Diamonds are a very important part of Celeste for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
+					<table class="table">
+                        <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Hours</th>
+                            <th>Minutes</th>
+                            <th>Seconds</th>
+                            <th>Platform</th>
+                            <th>Username</th>
+                            <th>Evidence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'celeste' AND `Category` = 'Collect All Strawberries' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        as $row) { 
+                        ?>
+
+                        <tr>
+                        <td> <?php echo htmlspecialchars($row['Game']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Minutes']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
+                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <?php } ?>
+                        </tbody>
+                    </table>
 				</span>
 			</div>
 		</div>

@@ -10,10 +10,13 @@ require_once('../includes/connect.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Css/style.css" type="text/css" charset="utf-8">
     <script async src="../js/tabs.js"></script>
-    <title>Document</title>
+    <title>Gamerun - Minecraft</title>
+    <meta name="theme-color"content="#317EFB" >
 </head>
 <div>
+    <!-- Div class Head at top of page contains, Navigation and Title -->
     <div class="head">
+        <header>Gamerun</header>
     <nav>
                 <ul>
                     <li class="sub">
@@ -23,12 +26,6 @@ require_once('../includes/connect.php');
                             <li class="sub">
                                 <a href="../contact.php">contact</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
                         </ul>
                     </li>
                     <li class="sub">
@@ -71,24 +68,38 @@ require_once('../includes/connect.php');
                 </ul>
             </nav>
             </div>
+            <!-- Div class Bodybox contains the main content of the page in a light grey colour box. This box helps the content stay responsive and adds a layer to contrast the main content on to make it more useable -->
             <div class="bodybox">
             <br>
             <br>
             <div class="formbox">
-            <P class="submitheader">Minecraft<p>
+            <!-- Header of the page. Gives the game that this page is focused on -->
+            <p class="submitheader">Minecraft<p>
+                <!-- Details of the game in Question -->
+                <p class="gamedetails">Counter-Strike: Global Offensive (CS:GO) is a multiplayer first-person shooter video game developed by Valve and Hidden Path Entertainment. It is the fourth game in the Counter-Strike series and was released for Windows, OSX, Xbox 360, and PlayStation 3 in August 2012, while the Linux version was released in 2014. The game pits two teams against each other: the Terrorists and the Counter-Terrorists. Both sides are tasked with eliminating the other while also completing separate objectives. The Terrorists, depending on the game mode, must either plant the bomb or defend the hostages, while the Counter-Terrorists must either prevent the bomb from being planted, defuse the bomb, or rescue the hostages. There are nine game modes, all of which have distinct characteristics specific to that mode. The game also has matchmaking support that allows players to play on dedicated Valve servers, as well as allowing members of the community to host their own servers with custom maps and game modes. A battle-royale game-mode, "Danger Zone", was introduced in 2018.</p>
+            <!-- This class is the begining of my tab system that displays content dependent on what Tab the user selects -->
             <div class="container--tabs">
 	        <section class="row">
 		    <ul class="nav nav-tabs">
-			<li class="active"><a href="#tab-1">All the Acheivments</a></li>
-			<li class=""><a href="#tab-2">First Diamond</a></li>
-			<li class=""><a href="#tab-3">Kill the Ender Dragon</a></li>
+            <!-- List of Buttons to switch between the tabs -->
+			<li class="active"><a href="#tab-1" class="tabbutton">Weapons Course</a></li>
+			<li class=""><a href="#tab-2" class="tabbutton">Any%</a></li>
 		    </ul>
 		    <div class="tab-content">
-			<div id="tab-1" class="tab-pane active"> 
-				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+            <!-- This Div class tab-conent handels the responsiveness of tabs -->
+            <div id="tab-1" class="tab-pane active" style="overflow-x:auto;">
 				<span class="col-md-10">
-					<h3>First Diamond</h3>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                    <h1>All Acheivments</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    All Achievements in Minecraft is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Minecraft. Achievements are achieved in Minecraft by completing specific tasks and progressing along the achievement tree.
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
+                        <thead>
                         <tr>
                             <th>Game</th>
                             <th>Hours</th>
@@ -98,11 +109,13 @@ require_once('../includes/connect.php');
                             <th>Username</th>
                             <th>Evidence</th>
                         </tr>
-                        <br>
+                        </thead>
+                        <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Platform` = 'PC'")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'CSGO' AND `Category` = 'Weapons Course' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
+
                         <tr>
                         <td> <?php echo htmlspecialchars($row['Game']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
@@ -112,21 +125,51 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
                         <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
                         <?php } ?>
+                        </tbody>
                     </table>
 				</span>
-			</div> 
+            </div> 
+            
 			<div id="tab-2" class="tab-pane">
-				<span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
-					<h3>Kill the Ender Dragon</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				</span>
-			</div>
-			<div id="tab-3" class="tab-pane">
-				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
-				<span class="col-md-10">
-					<h3>All the Acheivments</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                <h1>First Diamond</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    Diamonds are a very important part of Minecraft for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
+					<table class="table">
+                        <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Hours</th>
+                            <th>Minutes</th>
+                            <th>Seconds</th>
+                            <th>Platform</th>
+                            <th>Username</th>
+                            <th>Evidence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'CSGO' AND `Category` = 'Any%' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        as $row) { 
+                        ?>
+
+                        <tr>
+                        <td> <?php echo htmlspecialchars($row['Game']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Minutes']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
+                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <?php } ?>
+                        </tbody>
+                    </table>
 				</span>
 			</div>
 		</div>

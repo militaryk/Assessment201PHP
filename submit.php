@@ -90,7 +90,7 @@ require_once('includes/connect.php');
             <br>
             <span class="game_only" data-game="Astroneer">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-Astroneer">
             <option value="Pre Release">Pre Release</option>
             <option value="Post Release">Post Release</option>
             <option value="To Orbit">To Orbit</option>
@@ -100,7 +100,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Celeste">
             <br>
-            <span class="submit">Categories</span><select name ="Catergory" id="1">
+            <span class="submit">Categories</span><select name ="Catergory-Celeste">
             <option value="Complete Game">Complete Full Game</option>
             <option value="Collect All Strawberries">Collect all Strawberries</option>
             <br>
@@ -109,7 +109,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="CSGO">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-CSGO">
             <option value="Weapons Course">Weapons Course</option>
             <option value="Any%">Any%</option>
             <br>
@@ -119,11 +119,10 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Factorio">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
-            <option value="Any%">Any%</option>
+            <span class="submit">Categories</span><select name ="Category-Factorio">
             <option value="Research All Researches">Research All Researches</option>
             <option value="Complete All Achievments">Complete All Achievments</option>
-            <option value="Complete Game NO CONVEYORS">Complete Game NO CONVEYORS</option>
+            <option value="Launch Rocket">Launch Rocket</option>
             <br>
             </select>
             <br>
@@ -131,7 +130,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Doom">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-DOOM" >
             <option value="Gain all Achievments">Gain all Achievments</option>
             <option value="Any%">Any%</option>
             <br>
@@ -140,8 +139,8 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Minecraft">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
-            <option value="AlLAcheivment">All Achievments</option>
+            <span class="submit">Categories</span><select name ="Category-Minecraft">
+            <option value="AllAcheivment">All Achievments</option>
             <option value="KillEnderdragon">Kill Enderdragon</option>
             <option value="FirstDiamond">First Diamond</option>
             <br>
@@ -150,7 +149,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="RainbowSix">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-RainbowSix" >
             <option value="Complete All Situations">Complete All Situations</option>
             <option value="Classic Terrorist Hunt Random Loadout">Classic Terrorist Hunt Random Loadout</option>
             <option value="Classic Terrorist Hunt Chosen Loadout">Classic Terrorist Hunt Chosen Loadout</option>
@@ -160,7 +159,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Satisfactory">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-Satisfactory">
             <option value="Complete Game">Complete Game</option>
             <option value="Any%">Any%</option>
             <br>
@@ -169,7 +168,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Witcher">
             <br>
-            <span class="submit">Categories</span><select name ="Category" id="1">
+            <span class="submit">Categories</span><select name ="Category-Witcher" id="1">
             <option value="Complete Game">Complete Full Game</option>
             <option value="Any%">Any%</option>
             <br>
@@ -201,7 +200,7 @@ require_once('includes/connect.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// form was submitted, place data into appropriate variables
   $game = $_POST["Game"];
-  $category = $_POST["Category"];
+  $category = $_POST["Category-".$game];
   $hours = $_POST["Hours"];
   $minutes = $_POST["Minutes"];
   $seconds = $_POST["Seconds"];

@@ -10,10 +10,11 @@ require_once('includes/connect.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
-    <title>Document</title>
+    <title>Gamerun - Home</title>
 </head>
 <div>
     <div class="head">
+        <header>Gamerun</header>
     <nav>
                 <ul>
                     <li class="sub">
@@ -60,12 +61,6 @@ require_once('includes/connect.php');
                             </li>
                             
                         </ul>
-                        <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
-                        </ul>
-                    </li>
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
@@ -73,8 +68,8 @@ require_once('includes/connect.php');
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">
-                    <div class="item1"></div>
-                    <div class="item2"></div>
+                    <a href="games/minecraft.php" class="item1"><div></div></a>
+                    <a class="item2"><div></div></a>
                     <a class="item4" ><div></div></a>
                    <a class="item2-1" ><div></div></a>
                    <a class="item2-2" ><div></div></a>

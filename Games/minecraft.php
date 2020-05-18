@@ -10,10 +10,13 @@ require_once('../includes/connect.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Css/style.css" type="text/css" charset="utf-8">
     <script async src="../js/tabs.js"></script>
-    <title>Document</title>
+    <title>Gamerun - Minecraft</title>
+    <meta name="theme-color"content="#317EFB" >
 </head>
 <div>
+    <!-- Div class Head at top of page contains, Navigation and Title -->
     <div class="head">
+        <header>Gamerun</header>
     <nav>
                 <ul>
                     <li class="sub">
@@ -23,12 +26,6 @@ require_once('../includes/connect.php');
                             <li class="sub">
                                 <a href="../contact.php">contact</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
                         </ul>
                     </li>
                     <li class="sub">
@@ -71,37 +68,37 @@ require_once('../includes/connect.php');
                 </ul>
             </nav>
             </div>
+            <!-- Div class Bodybox contains the main content of the page in a light grey colour box. This box helps the content stay responsive and adds a layer to contrast the main content on to make it more useable -->
             <div class="bodybox">
             <br>
             <br>
             <div class="formbox">
-            <P class="submitheader">Minecraft<p>
+            <!-- Header of the page. Gives the game that this page is focused on -->
+            <p class="submitheader">Minecraft<p>
+                <!-- Details of the game in Question -->
+                <p class="gamedetails">Minecraft is a game created in 2009 by Notch alone Game developer and later taken over by Mojang a Game development company. Minecraft is only a single game available to play on all key platforms including Android, Xbox and PC otherwise known as Java addition. It is considered the most popular computer game in the World and has a player base of 480 million. Speedrunning is done in Survival mode the default mode of gameplay and is focused around surviving and progressing building and mining. As well as defeating hostile mobs and bosses.</p>
+            <!-- This class is the begining of my tab system that displays content dependent on what Tab the user selects -->
             <div class="container--tabs">
 	        <section class="row">
 		    <ul class="nav nav-tabs">
-			<li class="active"><a href="#tab-1">All the Acheivments</a></li>
-			<li class=""><a href="#tab-2">First Diamond</a></li>
-			<li class=""><a href="#tab-3">Kill the Ender Dragon</a></li>
+            <!-- List of Buttons to switch between the tabs -->
+			<li class="active"><a href="#tab-1" class="tabbutton">All the Acheivments</a></li>
+			<li class=""><a href="#tab-2" class="tabbutton">First Diamond</a></li>
+			<li class=""><a href="#tab-3" class="tabbutton">Kill the Ender Dragon</a></li>
 		    </ul>
 		    <div class="tab-content">
-			<div id="tab-1" class="tab-pane active" style="overflow-x:auto;"> 
-				<span class="glyphicon glyphicon-leaf glyphicon--home--feature two columns text-center"></span>
+            <!-- This Div class tab-conent handels the responsiveness of tabs -->
+            <div id="tab-1" class="tab-pane active" style="overflow-x:auto;">
 				<span class="col-md-10">
-                    <h1>All Acheivments</h1> 
-                    <span class="platformselect">
-                    <br>
-                    <span class="platformselection">Select Platform</span><select id="1">
-                    <option value="PC">All Platforms</option>
-                    <option value="PC">PC</option>
-                    <option value="XBOX">XBOX</option>
-                    <option value="Playstation">Playstation</option>
-                    <option value="Nintendo">Android</option>
-                    <br>
-                    <br>
-                    <br>
-                    </select>
-                    <br>
-                    </span>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                    <h1>All Acheivments</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    All Achievements in Minecraft is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Minecraft. Achievements are achieved in Minecraft by completing specific tasks and progressing along the achievement tree.
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
                         <thead>
                         <tr>
@@ -116,7 +113,7 @@ require_once('../includes/connect.php');
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Category` = 'AllAcheivment' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
 
@@ -132,19 +129,90 @@ require_once('../includes/connect.php');
                         </tbody>
                     </table>
 				</span>
-			</div> 
+            </div> 
+            
 			<div id="tab-2" class="tab-pane">
-				<span class="glyphicon glyphicon-fire glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
-					<h3>Kill the Ender Dragon</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <!-- This is the title for each of the tabs each tab represents each other -->
+                <h1>First Diamond</h1>
+                    <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                    <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    Diamonds are a very important part of Minecraft for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
+					<table class="table">
+                        <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Hours</th>
+                            <th>Minutes</th>
+                            <th>Seconds</th>
+                            <th>Platform</th>
+                            <th>Username</th>
+                            <th>Evidence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Category` = 'FirstDiamond' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        as $row) { 
+                        ?>
+
+                        <tr>
+                        <td> <?php echo htmlspecialchars($row['Game']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Minutes']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
+                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <?php } ?>
+                        </tbody>
+                    </table>
 				</span>
 			</div>
 			<div id="tab-3" class="tab-pane">
-				<span class="glyphicon glyphicon-tint glyphicon--home--feature two columns text-center"></span>
 				<span class="col-md-10">
-					<h3>All the Acheivments</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <!-- This is the title for each of the tabs each tab represents each other -->
+                <h1>Killing The Enderdragon</h1>
+                        <!-- Quick Button to accses the Result submision page -->
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
+                     <!-- Blurb about the significance and details of each page -->
+                    <p class="typeblurb">
+                    Killing the Enderdragon in Minecraft is a big deal and a monumental achievement. It is a very difficult task to achieve and is very rewarding as it allows you to progress further. This although not the end of the game is considered by some as End Game. End Game is when a game is at a point that it is the most advanced compared to the begining and nearing completion.
+                    </p>
+                    <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
+					<table class="table">
+                        <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Hours</th>
+                            <th>Minutes</th>
+                            <th>Seconds</th>
+                            <th>Platform</th>
+                            <th>Username</th>
+                            <th>Evidence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'minecraft' AND `Category` = 'KillEnderdragon' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        as $row) { 
+                        ?>
+
+                        <tr>
+                        <td> <?php echo htmlspecialchars($row['Game']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Hours']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Minutes']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
+                        <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
+                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <?php } ?>
+                        </tbody>
+                    </table>
 				</span>
 			</div>
 		</div>
@@ -155,6 +223,23 @@ require_once('../includes/connect.php');
                 <br>
                 </div>
                 </div>
-            </div>          
+            </div>   
+            <footer>
+                        <br>
+                        <p2>Made By Kaden Adlington</p2>
+                        <br>
+                        <p1>Made For School Assignment</p1>
+                        <br>
+                        <p3>All Images Are Labeled For Non-Comercial Reuse and/or Royalty Free</p3>
+                        <br>
+                        <p4>This Website Uses The <a style="text-decoration: none" class="footer" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p4>
+                        <br>
+                        <p>
+                            <!-- Icon for to show this page is CSS Validated -->
+                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                            </p>
+                            <br>
+                            <br>
+</footer>      
 </body>
 </html>
