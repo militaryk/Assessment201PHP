@@ -116,7 +116,7 @@ nav li > ul > li:hover > ul  {
       margin-top: 40%;
       box-shadow: 10px 10px 70px -20px rgba(0, 0, 0, 0.8);
     }
-    }
+  }
   
   @supports (display:grid) {
     .nogrid {
@@ -290,7 +290,6 @@ nav li > ul > li:hover > ul  {
     margin: 0;
     list-style-type: none;
     border-bottom: 1px solid #ddd;
-    padding-inline-start: 0px;
     padding-bottom: 1px;
 
   }
@@ -312,11 +311,11 @@ nav li > ul > li:hover > ul  {
   }
   .container--tabs .nav-tabs > li.active > a,
   .container--tabs .nav-tabs > li.active > a:hover,
-  .container--tabs .nav-tabs > li.active > a:foc  us {
-    color: #555;
+  .container--tabs .nav-tabs > li.active > a:focus {
+    color: #fff;
     text-decoration: none;
     cursor: default;
-    background-color: #fff;
+    background-color: rgb(142, 177, 82);
     border: 1px solid #ddd;
     border-bottom-color: transparent;
   }
@@ -365,8 +364,9 @@ nav li > ul > li:hover > ul  {
   .submitresults {
     float: left;
   }
+
   .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -397,7 +397,6 @@ nav li > ul > li:hover > ul  {
   footer {
     background-color: #333; 
     background-size: cover;
-    margin-top: 2.5%;
     text-align: center;
     color: #fff;
 
