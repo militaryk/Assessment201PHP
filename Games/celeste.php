@@ -9,6 +9,10 @@ require_once('../includes/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Css/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="../Css/style.css" type="text/css" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <script async src="../js/tabs.js"></script>
     <title>Gamerun - Celeste</title>
     <meta name="theme-color"content="#317EFB" >
