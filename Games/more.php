@@ -30,16 +30,10 @@ require_once('../includes/connect.php');
                         </ul>
                     </li>
                     <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
-                        </ul>
-                    </li>
-                    <li class="sub">
                         <a href="../games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="sandboxgames.php">Sandbox</a>
+                                <a href="#.php">Sandbox</a>
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
@@ -49,7 +43,7 @@ require_once('../includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="questinggames.php">Questing</a>
+                                <a href="#.php">Questing</a>
                                 <ul>
                                     <li><a href="witcher.php">Withcher</a></li>
                                     <li><a href="astroneer.php">Astroneer</a></li>
@@ -59,7 +53,7 @@ require_once('../includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="fpvgames.php">First Person Shooter</a>
+                                <a href="#.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="doom.php">Doom</a></li>
@@ -141,6 +135,23 @@ require_once('../includes/connect.php');
                 <br>
                 </div>
                 </div>
-            </div>          
+            </div>     
+            <footer>
+                        <br>
+                        <p2>Made By Kaden Adlington</p2>
+                        <br>
+                        <p1>Made For School Assignment</p1>
+                        <br>
+                        <p3>All Images Are Labeled For Non-Comercial Reuse and/or Royalty Free</p3>
+                        <br>
+                        <p4>This Website Uses The <a style="text-decoration: none" class="footer" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p4>
+                        <br>
+                        <p>
+                            <!-- Icon for to show this page is CSS Validated -->
+                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                            </p>
+                            <br>
+                            <br>
+</footer>           
 </body>
 </html>

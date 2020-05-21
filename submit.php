@@ -33,43 +33,34 @@ require_once('includes/connect.php');
                         <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="games/sandboxgames.php">Sandbox</a>
+                                <a href="#.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>
-                                    <li><a href="games/more">More</a></li>      
+                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>   
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="games/questinggames.php">Questing</a>
+                                <a href="#.php">Questing</a>
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
-                                    <li><a href="games/celeste.php">Celeste</a></li>
-                                    <li><a href="games/more.php">More</a></li>      
+                                    <li><a href="games/celeste.php">Celeste</a></li> 
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="games/fpvgames.php">First Person Shooter</a>
+                                <a href="#.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
                                     <li><a href="games/CSGO.php">CSGO</a></li>
-                                    <li><a href="games/CSGO.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
                             
                         </ul>
-                        <li class="sub">
-                        <a href="#">SearchBar</a>
-                        <ul>
-                            <p> Put Search Bar Hear</p>
-                        </ul>
-                    </li>
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
@@ -104,7 +95,7 @@ require_once('includes/connect.php');
             </span>
             <span class="game_only" data-game="Celeste">
             <br>
-            <span class="submit">Categories</span><select name ="Catergory-Celeste">
+            <span class="submit">Categories</span><select name ="Category-Celeste">
             <option value="Complete Game">Complete Full Game</option>
             <option value="Collect All Strawberries">Collect all Strawberries</option>
             <br>
@@ -255,6 +246,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <br>
                 </div>
                 </div>
-            </div>          
+            </div>      
+            <footer>
+                        <br>
+                        <p2>Made By Kaden Adlington</p2>
+                        <br>
+                        <p1>Made For School Assignment</p1>
+                        <br>
+                        <p3>All Images Are Labeled For Non-Comercial Reuse and/or Royalty Free</p3>
+                        <br>
+                        <p4>This Website Uses The <a style="text-decoration: none" class="footer" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p4>
+                        <br>
+                        <p>
+                            <!-- Icon for to show this page is CSS Validated -->
+                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                            </p>
+                            <br>
+                            <br>
+</footer>          
 </body>
 </html>

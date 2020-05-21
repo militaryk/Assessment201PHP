@@ -21,7 +21,7 @@ require_once('../includes/connect.php');
     <!-- Div class Head at top of page contains, Navigation and Title -->
     <div class="head">
         <header>Gamerun</header>
-    <nav>
+        <nav>
                 <ul>
                     <li class="sub">
                         <a href="../index.php">Home</a>
@@ -36,7 +36,7 @@ require_once('../includes/connect.php');
                         <a href="../games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="sandboxgames.php">Sandbox</a>
+                                <a href="#.php">Sandbox</a>
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
@@ -46,7 +46,7 @@ require_once('../includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="questinggames.php">Questing</a>
+                                <a href="#.php">Questing</a>
                                 <ul>
                                     <li><a href="witcher.php">Withcher</a></li>
                                     <li><a href="astroneer.php">Astroneer</a></li>
@@ -56,7 +56,7 @@ require_once('../includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="fpvgames.php">First Person Shooter</a>
+                                <a href="#.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="doom.php">Doom</a></li>

@@ -17,7 +17,7 @@ require_once('includes/connect.php');
 <div>
     <div class="head">
         <header>Gamerun</header>
-    <nav>
+        <nav>
                 <ul>
                     <li class="sub">
                         <a href="index.php">Home</a>
@@ -32,32 +32,29 @@ require_once('includes/connect.php');
                         <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="games/sandboxgames.php">Sandbox</a>
+                                <a href="#.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>
-                                    <li><a href="games/more">More</a></li>      
+                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>   
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="games/questinggames.php">Questing</a>
+                                <a href="#.php">Questing</a>
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
-                                    <li><a href="games/celeste.php">Celeste</a></li>
-                                    <li><a href="games/more.php">More</a></li>      
+                                    <li><a href="games/celeste.php">Celeste</a></li> 
                                     </li>
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="games/fpvgames.php">First Person Shooter</a>
+                                <a href="#.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
                                     <li><a href="games/CSGO.php">CSGO</a></li>
-                                    <li><a href="games/CSGO.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
@@ -66,7 +63,7 @@ require_once('includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>            </div>
+            </nav>       </div>
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">
@@ -81,6 +78,23 @@ require_once('includes/connect.php');
                    <a class="item3-3" ><div></div></a>
                   </div>
                 </div>
-            </div>          
+            </div>    
+            <footer>
+                        <br>
+                        <p2>Made By Kaden Adlington</p2>
+                        <br>
+                        <p1>Made For School Assignment</p1>
+                        <br>
+                        <p3>All Images Are Labeled For Non-Comercial Reuse and/or Royalty Free</p3>
+                        <br>
+                        <p4>This Website Uses The <a style="text-decoration: none" class="footer" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></p4>
+                        <br>
+                        <p>
+                            <!-- Icon for to show this page is CSS Validated -->
+                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                            </p>
+                            <br>
+                            <br>
+</footer>            
 </body>
 </html>
