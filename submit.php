@@ -171,7 +171,7 @@ require_once('includes/connect.php');
             <br>
             </span>
             <br>
-            <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="999"> <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" ><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60"><span class="submit">Secs</span><br>
+            <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="999" required > <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" required><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60" required><span class="submit">Secs</span><br>
             <br>
             <span class="submit">Platform:</span><select name ="Platform" id="">
             <option value="PC">PC (Computer)</option>
@@ -182,11 +182,11 @@ require_once('includes/connect.php');
             </select>
             <br>
             <br>
-            <span class="submit">Date:</span> <input type="date" name="Date"><br>
+            <span class="submit">Date:</span> <input type="date" name="Date" required><br>
             <br>
-            <span class="submit">Evidence (Please provide web links to all evidence and proof):</span> <input type="text" name="evidence"><br>
+            <span class="submit">Evidence (Please provide web links to all evidence and proof):</span> <input type="text" name="evidence" required><br>
             <br>
-            <span class="submit">Username:</span> <input type="text" name="UserName">
+            <span class="submit">Username:</span> <input type="text" name="UserName" required>
             <br>
             <br>
             <br>
@@ -205,36 +205,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST["UserName"];
   $timesubmitted = date('Y-m-d H:i:s');
 
+  $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, stream_context_create([
+    'http' => [
+        'method' => 'POST',
+        'header'  => "Content-type: application/x-www-form-urlencoded",
+        'content' => http_build_query([
+            'secret' => '6Ld0S_oUAAAAAJqPE67HsZxaf-5KVWyBU_VtNy-a', 'response' => $_POST['g-recaptcha-response']
+        ])
+    ]
+]));
+    $response = json_decode($response);
+    if (!$response ->success){
+        echo '<p class="error">Please fill in the captcha.</p>';
+    } else {
 
-	try {
-		// set the PDO error mode to exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        try {
+            // set the PDO error mode to exception
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		//insert data into activity table
-    $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Category,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:category,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
-    $sth->bindValue(':game', $game, PDO::PARAM_STR);
-    $sth->bindValue(':category', $category, PDO::PARAM_STR);
-    $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
-    $sth->bindValue(':date', $date, PDO::PARAM_STR);
-    $sth->bindValue(':username', $username, PDO::PARAM_STR);
-    $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
-    $sth->bindValue(':evidence', $evidence, PDO::PARAM_STR);
-    $sth->bindValue(':hours', $hours, PDO::PARAM_STR);
-    $sth->bindValue(':minutes', $minutes, PDO::PARAM_STR);
-    $sth->bindValue(':seconds', $seconds, PDO::PARAM_STR);
-    $count = $sth->execute();
+                //insert data into activity table
+            $sth = $pdo->prepare("INSERT INTO GameSpeedRunning (Game,Category,Hours,Minutes,Seconds,Platform,Date,UserName,evidence,timesubmited) VALUES (:game,:category,:hours,:minutes,:seconds,:platform,:date,:username,:evidence,:timesubmited)");
+            $sth->bindValue(':game', $game, PDO::PARAM_STR);
+            $sth->bindValue(':category', $category, PDO::PARAM_STR);
+            $sth->bindValue(':platform', $platform, PDO::PARAM_STR);
+            $sth->bindValue(':date', $date, PDO::PARAM_STR);
+            $sth->bindValue(':username', $username, PDO::PARAM_STR);
+            $sth->bindValue(':timesubmited', $timesubmitted, PDO::PARAM_STR);
+            $sth->bindValue(':evidence', $evidence, PDO::PARAM_STR);
+            $sth->bindValue(':hours', $hours, PDO::PARAM_STR);
+            $sth->bindValue(':minutes', $minutes, PDO::PARAM_STR);
+            $sth->bindValue(':seconds', $seconds, PDO::PARAM_STR);
+            $count = $sth->execute();
 
-       // echo the number of affected rows, if count =1 the record (row) was successfully inserted
-    if($count == 1){
-    	echo "<p class=submit>Data has been submitted</p>";
-    	}
+            // echo the number of affected rows, if count =1 the record (row) was successfully inserted
+            if($count == 1){
+                echo "<p class=submit>Data has been submitted</p>";
+            }
 
-    // close the database connection 
-    $pdo = null;
-	}
-   	catch(PDOException $e)
-    {
-    echo $e->getMessage();
+            // close the database connection 
+            $pdo = null;
+        }
+        catch(PDOException $e)
+        {
+            echo '<p class="error">'. $e->getMessage(). '</p>';
+        }
     }
  }
 ?>
