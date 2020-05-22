@@ -253,7 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
 ?>
       <div class="g-recaptcha" data-sitekey="6Ld0S_oUAAAAALAdofZg4ytrZmYraAgXYPWEoHrk"></div>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" class="button">
 </form>
                 <br>
                 <br>
