@@ -216,7 +216,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ]));
     $response = json_decode($response);
     if (!$response ->success){
-        echo '<p class="error">Please fill in the captcha.</p>';
+        echo '<p class="submitmessage">Please fill in the captcha.</p>';
     } else {
 
         try {
@@ -253,7 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
 ?>
       <div class="g-recaptcha" data-sitekey="6Ld0S_oUAAAAALAdofZg4ytrZmYraAgXYPWEoHrk"></div>
-      <input type="submit" value="Submit" class="button">
+      <input type="submit" value="Submit" class="button" style="float: left">
 </form>
                 <br>
                 <br>

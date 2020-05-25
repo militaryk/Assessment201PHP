@@ -1,9 +1,4 @@
-#logo{
-    position: absolute;
-    right:10px;
-    bottom: 10px;
-}
-
+/* Colouring of Dropdown naviagation bar aswell as positionaing and overflow control. (line 2 to 68 */
 nav {
     background-color: rgb(0, 0, 0, 0);
     border: 1px solid rgb(0, 0, 0, 0);
@@ -71,26 +66,19 @@ nav li > ul > li:hover > ul  {
     margin-left:100%;
     margin-top:-3em;
 }
-  html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+/* html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
   .wrapper {
     display: grid;
     grid-gap: 10px;
         color: #444;
-  }
+  } */
 
-  .box {
-       background-color: #444;
-       color: #fff;
-       border-radius: 5px;
-       padding: 20px;
-       font-size: 150%;
 
-  }
 
   * {
     box-sizing: border-box;
@@ -400,4 +388,14 @@ nav li > ul > li:hover > ul  {
     text-align: center;
     color: #fff;
 
+}
+.submitmessage {
+  color: white;
+  font-weight: bolder;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
