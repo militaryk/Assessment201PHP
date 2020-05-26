@@ -69,7 +69,7 @@ require_once('includes/connect.php');
                     <div class="gridcontainer">
                     <a href="games/minecraft.php" class="item1"><div></div></a>
                     <a class="item2"><div></div></a>
-                    <a class="item4" ><div></div></a>
+                    <a class="item3" ><div></div></a>
                    <a class="item2-1" ><div></div></a>
                    <a class="item2-2" ><div></div></a>
                    <a class="item2-3" ><div></div></a>

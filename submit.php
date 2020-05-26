@@ -171,7 +171,7 @@ require_once('includes/connect.php');
             <br>
             </span>
             <br>
-            <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="999" required > <span class="submit">Hrs</span> <input type="number" name="Minutes" min="0" step="1" max="60" required><span class="submit">Mins</span> <input type="number" name="Seconds" min="0" step="1" max="60" required><span class="submit">Secs</span><br>
+            <span class="submit">Time:</span> <input type="number" name="Hours" min="0" step="1" max="99999" required > <span class="submit">Hrs     </span> <input type="number" name="Minutes" min="0" step="1" max="60" required><span class="submit">Mins     </span> <input type="number" name="Seconds" min="0" step="1" max="60" required><span class="submit">Secs     </span><br>
             <br>
             <span class="submit">Platform:</span><select name ="Platform" id="">
             <option value="PC">PC (Computer)</option>
