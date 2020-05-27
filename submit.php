@@ -14,7 +14,7 @@ require_once('includes/connect.php');
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async src="js/tabs.js"></script>
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
-    <title>Document</title>
+    <title>Gamerun - Submit</title>
 </head>
 <div>
     <div class="head">
