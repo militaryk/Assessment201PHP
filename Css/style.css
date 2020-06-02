@@ -410,7 +410,7 @@ input[type=text] {
   box-sizing: border-box;
 }
 input[type=number] {
-  width: 8%;
+  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
