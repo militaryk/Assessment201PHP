@@ -253,7 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
 ?>
       <div class="g-recaptcha" data-sitekey="6Ld0S_oUAAAAALAdofZg4ytrZmYraAgXYPWEoHrk"></div>
-      <p class="submit"> All Data submitted will be displayed only on this Website.</p><p class="submit" style="font-size: small;">Other Data included is Time-Submitted, All data is stored with the only identifying data being the User submitted Username</p>
+      <p class="submit"> All Data submitted will be displayed only on this Website.</p><p class="submit" style="font-size: small;">Other Data included is Time-Submitted, All data is stored with the only identifying data being the User submitted Username.</p>
       <input type="submit" value="Submit" class="button" style="float: left">
 </form>
                 <br>

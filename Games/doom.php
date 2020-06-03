@@ -14,7 +14,7 @@ require_once('../includes/connect.php');
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <script async src="../js/tabs.js"></script>
-    <title>Gamerun - Minecraft</title>
+    <title>Gamerun - Doom</title>
     <meta name="theme-color"content="#317EFB" >
 </head>
 <div>
@@ -78,7 +78,7 @@ require_once('../includes/connect.php');
             <br>
             <div class="formbox">
             <!-- Header of the page. Gives the game that this page is focused on -->
-            <p class="submitheader">Minecraft<p>
+            <p class="submitheader">Doom<p>
                 <!-- Details of the game in Question -->
                 <p class="gamedetails">"Doom is a 1993 first-person shooter developed by id Software for MS-DOS. Players assume the role of a space marine, popularly known as "Doomguy", fighting his way through hordes of invading demons from Hell. The first episode, comprising nine levels, was distributed freely as shareware and played by an estimated 15–20 million people within two years; the full game, with two further episodes, was sold via mail order. An updated version with an additional episode and more difficult levels, Ultimate Doom, was released in 1995 and sold at retail."-Wikipedia</p>
             <!-- This class is the begining of my tab system that displays content dependent on what Tab the user selects -->
@@ -183,6 +183,7 @@ require_once('../includes/connect.php');
                 </div>
                 </div>
             </div>   
+            <!-- The Footer displays information on the webpage about the Author, License and Use, on every page  -->
             <footer>
                         <br>
                         <p2>Made By Kaden Adlington</p2>

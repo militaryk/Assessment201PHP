@@ -85,9 +85,9 @@ require_once('../includes/connect.php');
 	        <section class="row">
 		    <ul class="nav nav-tabs">
             <!-- List of Buttons to switch between the tabs -->
-			<li class="active"><a href="#tab-1" class="tabbutton">All the Acheivments</a></li>
-			<li class=""><a href="#tab-2" class="tabbutton">First Diamond</a></li>
-			<li class=""><a href="#tab-3" class="tabbutton">Kill the Ender Dragon</a></li>
+			<li class="active"><a href="#tab-1" class="tabbutton">Pre Release</a></li>
+			<li class=""><a href="#tab-3" class="tabbutton">Post Release</a></li>
+			<li class=""><a href="#tab-2" class="tabbutton">To Orbit</a></li>
 		    </ul>
 		    <div class="tab-content">
             <!-- This Div class tab-conent handels the responsiveness of tabs -->

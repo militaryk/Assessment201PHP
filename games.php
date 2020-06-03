@@ -13,6 +13,7 @@ require_once('includes/connect.php');
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
     <script async src="../js/tabs.js"></script>
+    <script async src="js/games.js"></script>
     <title>Document</title>
 </head>
 <div>
@@ -70,7 +71,53 @@ require_once('includes/connect.php');
             <br>
             <div class="formbox">
             <P class="submitheader">Games<p>
-</div>
+            <div id="btnContainer">
+            <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+            <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+            </div>
+            <br>
+
+            <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Minecraft</h2>
+                <p>A Sandbox Game..</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Witcher</h2>
+                <p>A Questing Game..</p>
+            </div>
+            </div>
+            <div class="row">
+            <div class="column" style="background-color:#ccc;">
+                <h2>Rainbow Six Siege</h2>
+                <p>A First Person Shooter Game..</p>
+            </div>
+            <div class="column" style="background-color:#ddd;">
+                <h2>Satisfactory</h2>
+                <p>A Sandbox Game..</p>
+            </div>
+            <div class="column" style="background-color:#ddd;">
+                <h2>Factorio</h2>
+                <p>A Sandbox Game..</p>
+            </div>
+            <div class="column" style="background-color:#ccc;">
+                <h2>DOOM (The Series)</h2>
+                <p>A First Person Shooter Game..</p>
+            </div>
+            <div class="column" style="background-color:#ccc;">
+                <h2>CSGO</h2>
+                <p>A First Person Shooter Game..</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Astroneer</h2>
+                <p>A Questing Game..</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Celeste</h2>
+                <p>A Questing Game..</p>
+            </div>
+            </div>
+            </div>
                 <br>
                 <br>
                 <br>
