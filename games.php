@@ -78,10 +78,10 @@ require_once('includes/connect.php');
             <br>
 
             <div class="row">
-            <div class="column" style="background-color:#aaa;">
+            <a href=""><div class="column" style="background-color:#aaa;">
                 <h2>Minecraft</h2>
                 <p>A Sandbox Game..</p>
-            </div>
+            </div></a>
             <div class="column" style="background-color:#bbb;">
                 <h2>Witcher</h2>
                 <p>A Questing Game..</p>
