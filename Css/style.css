@@ -430,8 +430,8 @@ select {
 }
 
 .column {
-  float: left;
-  width: 50%;
+  /* float: left;
+  width: 50%; */
   padding: 10px;
 }
 .row:after {
@@ -453,6 +453,13 @@ select {
   background-color: #666;
   color: white;
 }
-.column:hover {
-  background-color: #4CAF50;
+.gamelinks {
+  display: block;
+  flex-grow: 1;
+  text-decoration: none;
+  color: black;
+}
+.row >a:hover>.column {
+  background-color: #4CAF50 !important;
+  color: #333;
 }

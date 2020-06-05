@@ -36,7 +36,7 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>   
+                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>   
                                     </li>
                                 </ul>
                             </li>

@@ -37,7 +37,7 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>   
+                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>   
                                     </li>
                                 </ul>
                             </li>
@@ -72,52 +72,59 @@ require_once('includes/connect.php');
             <div class="formbox">
             <P class="submitheader">Games<p>
             <div id="btnContainer">
-            <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
-            <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+            <button class="btn active" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+            <button class="btn" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
             </div>
             <br>
-
+            <div class="gamelist">
             <div class="row">
-            <a href=""><div class="column" style="background-color:#aaa;">
+            <a class="gamelinks" href="games/minecraft.php"><div class="column" style="background-color:#aaa;">
                 <h2>Minecraft</h2>
                 <p>A Sandbox Game..</p>
             </div></a>
-            <div class="column" style="background-color:#bbb;">
+            <a class="gamelinks" href="games/witcher.php"><div class="column" style="background-color:#bbb;">
                 <h2>Witcher</h2>
                 <p>A Questing Game..</p>
-            </div>
+            </div></a>
             </div>
             <div class="row">
-            <div class="column" style="background-color:#ccc;">
+            <a class="gamelinks" href="games/r6seige.php"><div class="column" style="background-color:#ccc;">
                 <h2>Rainbow Six Siege</h2>
                 <p>A First Person Shooter Game..</p>
-            </div>
-            <div class="column" style="background-color:#ddd;">
+            </div></a>
+            <a class="gamelinks" href="games/satisfactory.php"><div class="column" style="background-color:#ddd;">
                 <h2>Satisfactory</h2>
                 <p>A Sandbox Game..</p>
+            </div></a>
             </div>
-            <div class="column" style="background-color:#ddd;">
+            <div class="row">
+            <a class="gamelinks" href="games/factorio.php"><div class="column" style="background-color:#ddd;">
                 <h2>Factorio</h2>
                 <p>A Sandbox Game..</p>
-            </div>
-            <div class="column" style="background-color:#ccc;">
+            </div></a>
+            <a class="gamelinks" href="games/doom.php"><div class="column" style="background-color:#ccc;">
                 <h2>DOOM (The Series)</h2>
                 <p>A First Person Shooter Game..</p>
-            </div>
-            <div class="column" style="background-color:#ccc;">
+            </div></a></div>
+            <div class="row">
+            <a class="gamelinks" href="games/csgo.php"><div class="column" style="background-color:#ccc;">
                 <h2>CSGO</h2>
                 <p>A First Person Shooter Game..</p>
-            </div>
-            <div class="column" style="background-color:#bbb;">
+            </div></a>
+            <a class="gamelinks" href="games/astoneer.php"><div class="column" style="background-color:#bbb;">
                 <h2>Astroneer</h2>
                 <p>A Questing Game..</p>
-            </div>
-            <div class="column" style="background-color:#bbb;">
+            </div></a></div>
+            <div class="row">
+            <a class="gamelinks" href="games/celeste.php"><div class="column" style="background-color:#bbb;">
                 <h2>Celeste</h2>
                 <p>A Questing Game..</p>
+            </div></a></div>
             </div>
             </div>
             </div>
+            </div>
+
                 <br>
                 <br>
                 <br>

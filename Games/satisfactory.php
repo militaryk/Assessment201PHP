@@ -39,7 +39,7 @@ require_once('../includes/connect.php');
                                 <ul>
                                     <li><a href="minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
-                                    <li><a href="satisfactory.php">Satisfactoy</a></li>
+                                    <li><a href="Satisfactory.php">Satisfactory</a></li>
                                     <li><a href="more">More</a></li>      
                                     </li>
                                 </ul>
@@ -115,7 +115,7 @@ require_once('../includes/connect.php');
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'satisfactory' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'Satisfactory' AND `Category` = 'Complete Game' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
 
@@ -158,7 +158,7 @@ require_once('../includes/connect.php');
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'satisfactory' AND `Category` = 'Any%' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
+                        foreach ($pdo -> query("SELECT * FROM `GameSpeedRunning` WHERE `Game` = 'Satisfactory' AND `Category` = 'Any%' ORDER BY Hours ASC, Minutes ASC, Seconds ASC")
                         as $row) { 
                         ?>
 

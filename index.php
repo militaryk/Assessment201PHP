@@ -36,7 +36,7 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/satisfactory.php">Satisfactoy</a></li>   
+                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>   
                                     </li>
                                 </ul>
                             </li>
@@ -76,6 +76,7 @@ require_once('includes/connect.php');
                    <a class="item3-1" ><div></div></a>
                    <a class="item3-2" ><div></div></a>
                    <a class="item3-3" ><div></div></a>
+                   <a href="games.php" style="grid-column:1/4;text-align:center"><button class="button" style="display:inline-block;float:none"> More Games.. </button></a>
                   </div>
                 </div>
             </div>    

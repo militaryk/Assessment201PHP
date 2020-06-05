@@ -1,13 +1,13 @@
-var elements = document.getElementsByClassName("column");
+var elements = document.getElementsByClassName("row");
 var i;
 function listView() {
   for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "100%";
+    elements[i].style.display = "block";
   }
 }
 function gridView() {
   for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
+    elements[i].style.display = "flex";
   }
 }
 var container = document.getElementById("btnContainer");
