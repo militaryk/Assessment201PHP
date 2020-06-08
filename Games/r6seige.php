@@ -137,9 +137,9 @@ require_once('../includes/connect.php');
 			<div id="tab-2" class="tab-pane">
 				<span class="col-md-10">
                     <!-- This is the title for each of the tabs each tab represents each other -->
-                <h1>Launch Rocket</h1>
+                <h1>Classic Terrorist Hunt Random Loadout</h1>
                     <!-- Quick Button to accses the Result submision page -->
-                    <a href="../submit.php"><button class="button"> Classic Terrorist Hunt Random Loadout</button></a>
+                    <a href="../submit.php"><button class="button"> Submit Your Results Here</button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
                         Launching the rocket is often considered the main ending of Factorio

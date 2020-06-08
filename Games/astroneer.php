@@ -99,7 +99,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    All Achievements in Astroneer is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Astroneer. Achievements are achieved in Astroneer by completing specific tasks and progressing along the achievement tree.
+                    Astroneer has been open as the perfect play ground for speedrunning from before it was fully released and still in devalopement. Pre Release represnets attempts and records acheived at this time.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -127,7 +127,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href="<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>
@@ -142,7 +142,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Diamonds are a very important part of Astroneer for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    Achieving Orbit in Astroneer is a important part of progress in the game and is key to continuing on with the game. It is often a hard acheivment to obtain but a must and was often used as a good target for Speedrunning before the game had its current storyline.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -170,7 +170,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href="<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>
@@ -184,7 +184,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                      <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Killing the Enderdragon in Astroneer is a big deal and a monumental achievement. It is a very difficult task to achieve and is very rewarding as it allows you to progress further. This although not the end of the game is considered by some as End Game. End Game is when a game is at a point that it is the most advanced compared to the begining and nearing completion.
+                    Post Release SpeedRunning is Speedrunning the entire game without missing any parts of it following the storyline in Astroneer released when the game was released completly although this is still receiving updates.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -212,7 +212,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href="<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>

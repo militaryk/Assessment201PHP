@@ -94,12 +94,12 @@ require_once('../includes/connect.php');
             <div id="tab-1" class="tab-pane active" style="overflow-x:auto;">
 				<span class="col-md-10">
                     <!-- This is the title for each of the tabs each tab represents each other -->
-                    <h1>All Acheivments</h1>
+                    <h1>Complte Game</h1>
                     <!-- Quick Button to accses the Result submision page -->
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    All Achievements in Celeste is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Celeste. Achievements are achieved in Celeste by completing specific tasks and progressing along the achievement tree.
+                    Complete game is completing the game to 100% without any skipping of anything and playing the game in the sequence it is supposed to be played.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -127,7 +127,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href=<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>
@@ -142,7 +142,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Diamonds are a very important part of Celeste for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    Strawberries are a prized acheivment to get in Celeste adding another challenge to the game. Some players who are avid players of the game will often race to see how fast they can collect every strawberry in the game.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -170,7 +170,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href=<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>

@@ -127,7 +127,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href=<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>
@@ -170,7 +170,7 @@ require_once('../includes/connect.php');
                         <td> <?php echo htmlspecialchars($row['Seconds']); ?></td>
                         <td> <?php echo htmlspecialchars($row['Platform']); ?></td>
                         <td> <?php echo htmlspecialchars($row['UserName']); ?></td>
-                        <td class="scale"> <?php echo htmlspecialchars($row['evidence']); ?></td>
+                        <td class="scale"><a href=<?php echo htmlspecialchars($row['evidence']); ?>">Relevant Evidence</a></td>
                         <?php } ?>
                         </tbody>
                     </table>
