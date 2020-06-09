@@ -141,7 +141,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Any% is the fastest possible completion of the game without needing to do everything. This often includes skipping sections of the game or breaking the sequence that the game is suposed to take place
+                    Any% is the fastest possible completion of the game without needing to do everything. This often includes skipping sections of the game or breaking the sequence that the game is suposed to take place.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">

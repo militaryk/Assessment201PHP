@@ -87,7 +87,7 @@ require_once('../includes/connect.php');
 		    <ul class="nav nav-tabs">
             <!-- List of Buttons to switch between the tabs -->
 			<li class="active"><a href="#tab-1" class="tabbutton">Gain all Achievments</a></li>
-			<li class=""><a href="#tab-2" class="tabbutton">First Diamond</a></li>
+			<li class=""><a href="#tab-2" class="tabbutton">Any%</a></li>
 		    </ul>
 		    <div class="tab-content">
             <!-- This Div class tab-conent handels the responsiveness of tabs -->
@@ -99,7 +99,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    All Achievements in Minecraft is when the player completes every single achievement available in the base game. This is the most popular as it is the only true completion of the game Minecraft. Achievements are achieved in Minecraft by completing specific tasks and progressing along the achievement tree.
+                    Gaining All Acheivments in the Origianal Doom and Ultimate Doom is a big challenge as the game has so many to Acheive. This is often done of multiple seasions and the aim to get every single one. This was one of the first ever Speedrunning Games and still is very popular in the Community Today.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -141,7 +141,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Diamonds are a very important part of Minecraft for some they're portrayed as rare gems that are a pain to get but come with great rewards. They are hard to get and players covert them and use them to share their riches. They are also a common currency between players to trade resources on multiplayer. The first diamond is always prised and is a representation of an entrance to a new era and is a very valued moment among players. The time between starting and getting them is always different and is always a fun challenge to see who can get them first.    
+                    Any% is the fastest possible completion of the game without needing to do everything. This often includes skipping sections of the game or breaking the sequence that the game is suposed to take place.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">

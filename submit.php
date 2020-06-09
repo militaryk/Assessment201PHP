@@ -1,6 +1,13 @@
 <?php
 //first connect to the database
 require_once('includes/connect.php');
+
+// Rick roll detector
+$evidence = $_POST['evidence'];
+if (strpos($evidence, 'dQw4w9WgXcQ')) {
+    header('Location: ' . $evidence);
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -220,6 +227,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
         try {
+            // check for a url
+            if (preg_match("/https?:\/\/.+/i", $evidence)) {
+
+            }
+            else {
+                echo '<p class="error"> Please insert a link into Evidence </p>';
+            }
+
             // set the PDO error mode to exception
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -253,7 +268,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
 ?>
       <div class="g-recaptcha" data-sitekey="6Ld0S_oUAAAAALAdofZg4ytrZmYraAgXYPWEoHrk"></div>
-      <p class="submit"> All Data submitted will be displayed only on this Website.</p><p class="submit" style="font-size: small;">Other Data included is Time-Submitted, All data is stored with the only identifying data being the User submitted Username.</p>
+      <p class="submit"> All Data submitted will be displayed only on this Website.</p><p class="submit" style="font-size: small;">Other Data Submitted is Time-Submitted, All data is stored with the only identifying data being the User submitted Username.</p>
       <input type="submit" value="Submit" class="button" style="float: left">
 </form>
                 <br>

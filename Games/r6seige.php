@@ -99,7 +99,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Researching all Researches is a big goal of many Factorio players. Although it is not the key ending it is the second most attempted ending and is often seen as the completion of the game.
+                    Completing All Situations in Rainbow is often a challenge to do and is often speedruned by advanced players as a way to enhance their skills and as a fun race between each other. Situations in Rainbow are little settings where the player needs to complete a object like Defend the Objective and Attack the Objective all with fixed loadouts and Operators(Characters).
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -142,7 +142,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here</button></a>
                     <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                        Launching the rocket is often considered the main ending of Factorio
+                        Terrorist Hunt in Rainbow is a PvE gamemode where the Objective is to fight the hostile AI and clear all AI off the map as fast as possible. Random Loadout is when the player has to play the Terrorist Hunt with a randomly generated Loadout.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
@@ -184,7 +184,7 @@ require_once('../includes/connect.php');
                     <a href="../submit.php"><button class="button"> Submit Your Results Here </button></a>
                      <!-- Blurb about the significance and details of each page -->
                     <p class="typeblurb">
-                    Completing all Achievements is often hard to achieve achievements and is often the only sort after by players willing to sink days into the game and push for the hardest to get achievements requiring way more than the normal beginner ending.
+                    Terrorist Hunt in Rainbow is a PvE gamemode where the Objective is to fight the hostile AI and clear all AI off the map as fast as possible. Terrorist Hunt Chosen loadout is when the player gets to choose the Loadout they find the best.
                     </p>
                     <!-- PhP table that handels the fluent displaying of infomation to the user that automaticly displays newly updated data to the user aslong as they refresh the page -->
 					<table class="table">
