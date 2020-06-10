@@ -135,7 +135,7 @@ nav li > ul > li:hover > ul  {
   }
   
    .item2 {
-     background-color: #3498db;
+    background-image: url(../images/Astroneer.png);
      grid-row: 2;
      margin: 2vh;
      z-index: 1;
@@ -143,7 +143,7 @@ nav li > ul > li:hover > ul  {
    }
   
    .item3 {
-     background-color: #bdc3c7;
+    background-image: url(../images/Factorio.png);
      grid-row: 3;
      background-size: 50%;
      background-repeat: no-repeat;
@@ -155,7 +155,7 @@ nav li > ul > li:hover > ul  {
   
   
    .item2-1 {
-    background-color: #bdc3c7;
+    background-image: url(../images/Satisfactory.png);
     grid-row: 1;
     grid-column: 2;
     background-size: 50%;
@@ -166,7 +166,7 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 100%;
    }
    .item2-2 {
-    background-color: #bdc3c7;
+    background-image: url(../images/Doom.png);
     grid-row: 2;
     grid-column: 2;
     background-size: 50%;
@@ -177,7 +177,7 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 100%;
    }
    .item2-3 {
-    background-color: #bdc3c7;
+    background-image: url(../images/Witcher.png);
     grid-row: 3;
     grid-column: 2;
     background-size: 50%;
@@ -188,7 +188,7 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 100%;
    }
    .item3-1 {
-    background-color: #bdc3c7;
+    background-image: url(../images/RainbowSix.png);
     grid-row: 1;
     grid-column: 3;
     background-size: 50%;
@@ -199,7 +199,7 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 100%;
    }
    .item3-2 {
-    background-color: #bdc3c7;
+    background-image: url(../images/Celeste.png);
     grid-row: 2;
     grid-column: 3;
     background-size: 50%;
@@ -210,7 +210,7 @@ nav li > ul > li:hover > ul  {
     background-size: 100% 100%;
    }
    .item3-3 {
-    background-color: #bdc3c7;
+    background-image: url(../images/CSGO.png);
     grid-row: 3;
     grid-column: 3;
     background-size: 50%;

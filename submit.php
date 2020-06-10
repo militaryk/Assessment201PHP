@@ -3,10 +3,12 @@
 require_once('includes/connect.php');
 
 // Rick roll detector
-$evidence = $_POST['evidence'];
-if (strpos($evidence, 'dQw4w9WgXcQ')) {
-    header('Location: ' . $evidence);
-    exit;
+if (isset($_POST['evidence'])) {
+    $evidence = $_POST['evidence'];
+    if (strpos($evidence, 'dQw4w9WgXcQ')) {
+        header('Location: ' . $evidence);
+        exit;
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -25,6 +27,7 @@ if (strpos($evidence, 'dQw4w9WgXcQ')) {
 </head>
 <div>
     <div class="head">
+        <header>Gamerun</header>
     <nav>
                 <ul>
                     <li class="sub">
@@ -228,11 +231,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         try {
             // check for a url
-            if (preg_match("/https?:\/\/.+/i", $evidence)) {
-
-            }
-            else {
-                echo '<p class="error"> Please insert a link into Evidence </p>';
+            if (!preg_match("/https?:\/\/.+/i", $evidence)) {
+                throw new Exception('Please insert a link into Evidence');
             }
 
             // set the PDO error mode to exception
@@ -260,9 +260,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // close the database connection 
             $pdo = null;
         }
-        catch(PDOException $e)
+        catch(Exception $e)
         {
-            echo '<p class="error">'. $e->getMessage(). '</p>';
+            echo '<p class="error" id="error">'. $e->getMessage(). '</p>';
+            echo '<script>location.href+="#error"</script>';
         }
     }
  }
