@@ -28,7 +28,7 @@ require_once('../includes/connect.php');
                         <ul>
                             <li><a href="../Details.php">Details</a></li>
                             <li class="sub">
-                                <a href="../contact.php">contact</a>
+                                <a href="../contact.php">Contact</a>
                             </li>
                         </ul>
                     </li>
@@ -38,10 +38,10 @@ require_once('../includes/connect.php');
                             <li class="sub">
                                 <a href="#.php">Sandbox</a>
                                 <ul>
-                                    <li><a href="CSGO.php">Minecraft</a></li>
+                                    <li><a href="minecraft.php">Minecraft</a></li>
                                     <li><a href="factorio.php">Factorio</a></li>
                                     <li><a href="Satisfactory.php">Satisfactory</a></li>
-                                    <li><a href="more">More</a></li>      
+                                    <li><a href="../sandbox.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
@@ -51,7 +51,7 @@ require_once('../includes/connect.php');
                                     <li><a href="witcher.php">Withcher</a></li>
                                     <li><a href="astroneer.php">Astroneer</a></li>
                                     <li><a href="celeste.php">Celeste</a></li>
-                                    <li><a href="more.php">More</a></li>      
+                                    <li><a href="../questing.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>
@@ -61,7 +61,7 @@ require_once('../includes/connect.php');
                                     <li><a href="r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="doom.php">Doom</a></li>
                                     <li><a href="CSGO.php">CSGO</a></li>
-                                    <li><a href="CSGO.php">More</a></li>      
+                                    <li><a href="../fps.php">More</a></li>      
                                     </li>
                                 </ul>
                             </li>

@@ -24,7 +24,7 @@ require_once('includes/connect.php');
                         <ul>
                             <li><a href="Details.php">Details</a></li>
                             <li class="sub">
-                                <a href="contact.php">contact</a>
+                                <a href="contact.php">Contact</a>
                             </li>
                         </ul>
                     </li>
@@ -36,7 +36,8 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>   
+                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>
+                                    <li><a href="sandbox.php">More</a></li>   
                                     </li>
                                 </ul>
                             </li>
@@ -45,7 +46,8 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
-                                    <li><a href="games/celeste.php">Celeste</a></li> 
+                                    <li><a href="games/celeste.php">Celeste</a></li>
+                                    <li><a href="questing.php">More</a></li>     
                                     </li>
                                 </ul>
                             </li>
@@ -55,6 +57,7 @@ require_once('includes/connect.php');
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
                                     <li><a href="games/CSGO.php">CSGO</a></li>
+                                    <li><a href="fps.php">More</a></li>     
                                     </li>
                                 </ul>
                             </li>
@@ -63,7 +66,8 @@ require_once('includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>       </div>
+            </nav>        
+        </div>
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">

@@ -13,7 +13,7 @@ require_once('includes/connect.php');
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
     <script async src="../js/tabs.js"></script>
-    <title>Document</title>
+    <title>Gamerun - Documents</title>
 </head>
 <div>
     <div class="head">
@@ -24,7 +24,7 @@ require_once('includes/connect.php');
                         <ul>
                             <li><a href="Details.php">Details</a></li>
                             <li class="sub">
-                                <a href="contact.php">contact</a>
+                                <a href="contact.php">Contact</a>
                             </li>
                         </ul>
                     </li>
@@ -36,7 +36,8 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
-                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>   
+                                    <li><a href="games/Satisfactory.php">Satisfactory</a></li>
+                                    <li><a href="sandbox.php">More</a></li>   
                                     </li>
                                 </ul>
                             </li>
@@ -45,7 +46,8 @@ require_once('includes/connect.php');
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
-                                    <li><a href="games/celeste.php">Celeste</a></li> 
+                                    <li><a href="games/celeste.php">Celeste</a></li>
+                                    <li><a href="questing.php">More</a></li>     
                                     </li>
                                 </ul>
                             </li>
@@ -55,6 +57,7 @@ require_once('includes/connect.php');
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
                                     <li><a href="games/CSGO.php">CSGO</a></li>
+                                    <li><a href="fps.php">More</a></li>     
                                     </li>
                                 </ul>
                             </li>
