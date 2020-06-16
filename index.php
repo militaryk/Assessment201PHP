@@ -37,7 +37,7 @@ require_once('includes/connect.php');
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
                                     <li><a href="games/Satisfactory.php">Satisfactory</a></li>
-                                    <li><a href="sandbox.php">More</a></li>   
+                                    <li><a href="sandbox.php">More Games</a></li>   
                                     </li>
                                 </ul>
                             </li>
@@ -47,7 +47,7 @@ require_once('includes/connect.php');
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
                                     <li><a href="games/celeste.php">Celeste</a></li>
-                                    <li><a href="questing.php">More</a></li>     
+                                    <li><a href="questing.php">More Games</a></li>     
                                     </li>
                                 </ul>
                             </li>
@@ -57,7 +57,7 @@ require_once('includes/connect.php');
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
                                     <li><a href="games/CSGO.php">CSGO</a></li>
-                                    <li><a href="fps.php">More</a></li>     
+                                    <li><a href="fps.php">More Games</a></li>     
                                     </li>
                                 </ul>
                             </li>
@@ -71,16 +71,16 @@ require_once('includes/connect.php');
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">
-                    <a alt="To Minecraft" href="games/minecraft.php" class="item1"><div></div></a>
-                    <a alt="To Astroneer" href="games/astroneer.php" class="item2"><div></div></a>
-                    <a alt="To Factorio" href="games/factorio.php" class="item3" ><div></div></a>
-                   <a alt="To Satisfactory" href="games/satisfactory.php"  class="item2-1" ><div></div></a>
-                   <a alt="To Doom" href="games/doom.php" class="item2-2" ><div></div></a>
-                   <a alt="To Witcher" href="games/witcher.php" class="item2-3" ><div></div></a>
-                   <a alt="To Rainbow Six Siege" href="games/r6seige.php" class="item3-1" ><div></div></a>
-                   <a alt="To Celeste" href="games/celeste.php" class="item3-2" ><div></div></a>
-                   <a alt="To Counter Strike" href="games/csgo.php" class="item3-3" ><div></div></a>
-                   <a alt="To Games List" href="games.php" style="grid-column:1/4;text-align:center"><button class="button" style="display:inline-block;float:none"> More Games.. </button></a>
+                    <a aria-label="To Minecraft" href="games/minecraft.php" class="item1"><div></div></a>
+                    <a aria-label="To Astroneer" href="games/astroneer.php" class="item2"><div></div></a>
+                    <a aria-label="To Factorio" href="games/factorio.php" class="item3" ><div></div></a>
+                   <a aria-label="To Satisfactory" href="games/satisfactory.php"  class="item2-1" ><div></div></a>
+                   <a aria-label="To Doom" href="games/doom.php" class="item2-2" ><div></div></a>
+                   <a aria-label="To Witcher" href="games/witcher.php" class="item2-3" ><div></div></a>
+                   <a aria-label="To Rainbow Six Siege" href="games/r6seige.php" class="item3-1" ><div></div></a>
+                   <a aria-label="To Celeste" href="games/celeste.php" class="item3-2" ><div></div></a>
+                   <a aria-label="To Counter Strike" href="games/csgo.php" class="item3-3" ><div></div></a>
+                   <a aria-label="To Games List" href="games.php" style="grid-column:1/4;text-align:center"><button class="button" style="display:inline-block;float:none"> More Games Games.. </button></a>
                   </div>
                 </div>
             </div>    
@@ -96,7 +96,7 @@ require_once('includes/connect.php');
                         <br>
                         <p>
                             <!-- Icon for to show this page is CSS Validated -->
-                                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+                                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
                             </p>
                             <br>
                             <br>
