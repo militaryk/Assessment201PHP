@@ -71,16 +71,16 @@ require_once('includes/connect.php');
             <div class="bodybox">
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">
-                    <a href="games/minecraft.php" class="item1"><div></div></a>
-                    <a href="games/astroneer.php" class="item2"><div></div></a>
-                    <a href="games/factorio.php" class="item3" ><div></div></a>
-                   <a href="games/satisfactory.php"  class="item2-1" ><div></div></a>
-                   <a href="games/doom.php" class="item2-2" ><div></div></a>
-                   <a href="games/witcher.php" class="item2-3" ><div></div></a>
-                   <a href="games/r6seige.php" class="item3-1" ><div></div></a>
-                   <a href="games/celeste.php" class="item3-2" ><div></div></a>
-                   <a href="games/csgo.php" class="item3-3" ><div></div></a>
-                   <a href="games.php" style="grid-column:1/4;text-align:center"><button class="button" style="display:inline-block;float:none"> More Games.. </button></a>
+                    <a alt="To Minecraft" href="games/minecraft.php" class="item1"><div></div></a>
+                    <a alt="To Astroneer" href="games/astroneer.php" class="item2"><div></div></a>
+                    <a alt="To Factorio" href="games/factorio.php" class="item3" ><div></div></a>
+                   <a alt="To Satisfactory" href="games/satisfactory.php"  class="item2-1" ><div></div></a>
+                   <a alt="To Doom" href="games/doom.php" class="item2-2" ><div></div></a>
+                   <a alt="To Witcher" href="games/witcher.php" class="item2-3" ><div></div></a>
+                   <a alt="To Rainbow Six Siege" href="games/r6seige.php" class="item3-1" ><div></div></a>
+                   <a alt="To Celeste" href="games/celeste.php" class="item3-2" ><div></div></a>
+                   <a alt="To Counter Strike" href="games/csgo.php" class="item3-3" ><div></div></a>
+                   <a alt="To Games List" href="games.php" style="grid-column:1/4;text-align:center"><button class="button" style="display:inline-block;float:none"> More Games.. </button></a>
                   </div>
                 </div>
             </div>    
