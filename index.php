@@ -69,6 +69,9 @@ require_once('includes/connect.php');
             </nav>        
         </div>
             <div class="bodybox">
+                <div class="formbox" style="padding:4px; margin:10px;">
+                    <p class="gamedetails" style="padding:1px; margin:0px;">Gamerun is a website designed for gamers of all ages and games that are designed to be a place to compare and compete for the top and fastest completion of a game called Speedrunning. Speedrunning is playing a game as fast as possible in the least amount of time possible. There is many types of speedrunning such as Any% when people race to finish the game but are allowed to skip parts if needed and use glitches to their advantage. Complete Game when it is aimed to race to finish the game but without skipping anything and doing everything possible this is the most common type. Others include game-specific tasks like racing to get into orbit in Astroneer or mining your very first diamond in Minecraft.</p>
+                </div>
                 <h2 class="nogrid">It looks like you don't have CSS Grid module enabled. Grid module is really cool. Try downloading Firefox Nightly, Safari Technology Preview, or go to chrome://flags and tick "Enable experimental Web Platform features". You won't be disappointed! </h2>
                     <div class="gridcontainer">
                     <a aria-label="To Minecraft" href="games/minecraft.php" class="item1"><div></div></a>
