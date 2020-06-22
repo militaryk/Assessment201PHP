@@ -12,27 +12,24 @@ require_once('includes/connect.php');
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="Css/style.css" type="text/css" charset="utf-8">
-    <script async src="../js/tabs.js"></script>
-    <title>Gamerun - Contact</title>
+    <title>Gamerun - Legal</title>
 </head>
 <div>
     <div class="head">
-    <nav>
+        <header>Gamerun</header>
+             <nav>
                 <ul>
                     <li class="sub">
                         <a href="index.php">Home</a>
                         <ul>
                             <li><a href="Details.php">Details</a></li>
-                            <li class="sub">
-                                <a href="contact.php">Contact</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="sub">
                         <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="#.php">Sandbox</a>
+                                <a href="sandbox.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
@@ -42,7 +39,7 @@ require_once('includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="#.php">Questing</a>
+                                <a href="questing.php">Questing</a>
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
@@ -52,7 +49,7 @@ require_once('includes/connect.php');
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="#.php">First Person Shooter</a>
+                                <a href="fps.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
@@ -66,19 +63,13 @@ require_once('includes/connect.php');
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>           </div>
+            </nav>             
+        </div>
             <div class="bodybox">
-            <br>
-            <br>
             <div class="formbox">
-            <P class="submitheader">Games<p>
-</div>
-                <br>
-                <br>
-                <br>
-                </div>
-                </div>
-            </div>      
+            <p class="gamedetails"></p>
+            </div>
+            </div>    
             <footer>
                         <br>
                         <p2>Made By Kaden Adlington</p2>
@@ -95,6 +86,6 @@ require_once('includes/connect.php');
                             </p>
                             <br>
                             <br>
-</footer>          
+</footer>            
 </body>
 </html>

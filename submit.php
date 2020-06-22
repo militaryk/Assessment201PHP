@@ -28,22 +28,19 @@ if (isset($_POST['evidence'])) {
 <div>
     <div class="head">
         <header>Gamerun</header>
-        <nav>
+             <nav>
                 <ul>
                     <li class="sub">
                         <a href="index.php">Home</a>
                         <ul>
                             <li><a href="Details.php">Details</a></li>
-                            <li class="sub">
-                                <a href="contact.php">Contact</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="sub">
                         <a href="games.php">Games</a>
                         <ul>
                             <li class="sub">
-                                <a href="#.php">Sandbox</a>
+                                <a href="sandbox.php">Sandbox</a>
                                 <ul>
                                     <li><a href="games/minecraft.php">Minecraft</a></li>
                                     <li><a href="games/factorio.php">Factorio</a></li>
@@ -53,7 +50,7 @@ if (isset($_POST['evidence'])) {
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="#.php">Questing</a>
+                                <a href="questing.php">Questing</a>
                                 <ul>
                                     <li><a href="games/witcher.php">Withcher</a></li>
                                     <li><a href="games/astroneer.php">Astroneer</a></li>
@@ -63,7 +60,7 @@ if (isset($_POST['evidence'])) {
                                 </ul>
                             </li>
                             <li class="sub">
-                                <a href="#.php">First Person Shooter</a>
+                                <a href="fps.php">First Person Shooter</a>
                                 <ul>
                                     <li><a href="games/r6seige.php">Rainbow Six Siege</a></li>
                                     <li><a href="games/doom.php">Doom</a></li>
@@ -77,7 +74,7 @@ if (isset($_POST['evidence'])) {
                     </li>
                     <li><a href="submit.php">Submit Your Results</a></li>
                 </ul>
-            </nav>            </div>
+            </nav>                 </div>
             <div class="bodybox">
             <br>
             <br>
